@@ -1,0 +1,33 @@
+.wrapper
+{
+  max-width: 940px;
+  margin: auto;
+  padding: 0;
+}
+
+.header
+{
+  clear: both;
+  min-height: 64px;
+}
+
+.container
+{
+  /*background: #389fff;*/
+}
+
+.top
+{
+  padding: 20px;
+  /*background: red;*/
+
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+}
+
+.top button
+{
+  height: 52px;
+  width: 52px;
+}

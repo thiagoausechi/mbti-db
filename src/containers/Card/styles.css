@@ -1,0 +1,61 @@
+.card
+{
+    display: grid;
+    position: relative;
+
+    grid-template-columns: 132px 312px 312px 1fr;
+    grid-template-rows: 100px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "icon persona type avatar"
+        "icon persona type avatar";
+
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 22px;
+}
+
+.card-title
+{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.card-snippet
+{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.icon
+{
+    grid-area: icon;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.persona
+{
+    grid-area: persona;
+
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.type
+{
+    grid-area: type;
+
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.avatar { grid-area: avatar; }
