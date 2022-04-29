@@ -1,28 +1,26 @@
 import "./styles.css";
-import { getPersonality } from "../../global/personalities";
 
-import { ReactComponent as BlankAvatar } from "../../assets/blank_avatar.svg";
+import TYPES from "../../../global/personalities";
+import Icon from "../../layout/Icon";
 
 const Card = ({ persona }) => 
 {
-    const type = getPersonality(persona.personality);
+    const type = TYPES[persona.type];
     const role = type.role;
 
     return (
         <div className="card" style={{ background: role.secondary }}>
 
             <div className="icon">
-                <BlankAvatar fill={role.primary} />
+                <Icon icon={persona.icon} color={role.primary} />
             </div>
-
-
 
             <div className="persona">
                 <div className="card-title" style={{ color: role.primary }}>
                     {persona.name}
                 </div>
                 <div className="card-snippet">
-                    {type.initials + (persona.personality.identity ? ("-" + persona.personality.identity.toUpperCase()) : '')}
+                    {type.initials + (persona.identity ? ("-" + persona.identity.toUpperCase()) : '')}
                 </div>
             </div>
 
@@ -39,20 +37,12 @@ const Card = ({ persona }) =>
 
 
 
-            <div className="avatar"></div>
+            <div className="avatar">
+                <img src={`/assets/types/${type.initials.toLowerCase()}_${persona.gender}.svg`} />
+            </div>
 
         </div>
     );
 }
-
-function getPersonalityAsString(p)
-{
-    let result = "";
-    if (!p.identity) result = (p.mind + p.energy + p.nature + p.tactics);
-    else result = (p.mind + p.energy + p.nature + p.tactics + "-" + p.identity);
-
-    return result.toUpperCase();
-}
-
 
 export default Card;
