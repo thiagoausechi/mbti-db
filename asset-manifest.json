@@ -1,15 +1,47 @@
 {
   "files": {
     "main.css": "/mbti-db/static/css/main.067bb795.css",
-    "main.js": "/mbti-db/static/js/main.44a55574.js",
+    "main.js": "/mbti-db/static/js/main.a932d22f.js",
     "static/media/noise.png": "/mbti-db/static/media/noise.fc187c22e0c716848733.png",
+    "static/media/intp_male.svg": "/mbti-db/static/media/intp_male.952377c9025759c93923.svg",
+    "static/media/intj_female.svg": "/mbti-db/static/media/intj_female.a71bf1d9f684e98ea1cd.svg",
+    "static/media/isfp_female.svg": "/mbti-db/static/media/isfp_female.9c9e0eca581cbd6b6307.svg",
+    "static/media/estj_female.svg": "/mbti-db/static/media/estj_female.9f08526aaa120648d7d8.svg",
+    "static/media/estp_female.svg": "/mbti-db/static/media/estp_female.c4222bc0419336fc308b.svg",
+    "static/media/istp_male.svg": "/mbti-db/static/media/istp_male.7457b64b4702ed3a57a4.svg",
+    "static/media/infp_female.svg": "/mbti-db/static/media/infp_female.03a998041923f31d500f.svg",
+    "static/media/esfp_female.svg": "/mbti-db/static/media/esfp_female.2981e84981b9296a2f0f.svg",
+    "static/media/esfj_male.svg": "/mbti-db/static/media/esfj_male.f5a499555647cd47a46c.svg",
+    "static/media/esfj_female.svg": "/mbti-db/static/media/esfj_female.c7d8be44ee50976f53ed.svg",
+    "static/media/estp_male.svg": "/mbti-db/static/media/estp_male.d5b76738c9828b647ab4.svg",
+    "static/media/estj_male.svg": "/mbti-db/static/media/estj_male.6923846c6559aee5f1c6.svg",
+    "static/media/istp_female.svg": "/mbti-db/static/media/istp_female.9a9613043e89d6344ba9.svg",
+    "static/media/infj_male.svg": "/mbti-db/static/media/infj_male.33ea3821a6e94e212b19.svg",
+    "static/media/intp_female.svg": "/mbti-db/static/media/intp_female.611e1eac5b3ffc227aae.svg",
+    "static/media/intj_male.svg": "/mbti-db/static/media/intj_male.1e22dd68e10754df4e13.svg",
+    "static/media/istj_female.svg": "/mbti-db/static/media/istj_female.f5b26fce09450e3cc62e.svg",
+    "static/media/istj_male.svg": "/mbti-db/static/media/istj_male.79a43c590fdbad325a4d.svg",
+    "static/media/infp_male.svg": "/mbti-db/static/media/infp_male.b936e48af79468cf8395.svg",
+    "static/media/enfp_female.svg": "/mbti-db/static/media/enfp_female.59d4075d8d08ff7a4e30.svg",
+    "static/media/entp_female.svg": "/mbti-db/static/media/entp_female.7586fa58d3ef95411d81.svg",
+    "static/media/enfp_male.svg": "/mbti-db/static/media/enfp_male.74c7e1d7898788ed94c0.svg",
+    "static/media/isfj_male.svg": "/mbti-db/static/media/isfj_male.74238dcaf9dabc21f91f.svg",
+    "static/media/entj_male.svg": "/mbti-db/static/media/entj_male.10ad42fea6f60773bcfe.svg",
+    "static/media/entj_female.svg": "/mbti-db/static/media/entj_female.23a27de9b4ea1134a595.svg",
+    "static/media/isfp_male.svg": "/mbti-db/static/media/isfp_male.2c65cdf4ef4747565608.svg",
+    "static/media/enfj_female.svg": "/mbti-db/static/media/enfj_female.7eb6450db4eb1656f6d9.svg",
+    "static/media/enfj_male.svg": "/mbti-db/static/media/enfj_male.3604e26f25c6ac659acc.svg",
+    "static/media/entp_male.svg": "/mbti-db/static/media/entp_male.9e9610eb54f11cc53cee.svg",
+    "static/media/infj_female.svg": "/mbti-db/static/media/infj_female.d1d055449347671e8546.svg",
+    "static/media/esfp_male.svg": "/mbti-db/static/media/esfp_male.167706ee77e43dd98ed8.svg",
+    "static/media/isfj_female.svg": "/mbti-db/static/media/isfj_female.d10daf0670077504d6bb.svg",
     "static/media/blank_avatar.svg": "/mbti-db/static/media/blank_avatar.23160a03a98bdc041e4a9f234bde614e.svg",
     "index.html": "/mbti-db/index.html",
     "main.067bb795.css.map": "/mbti-db/static/css/main.067bb795.css.map",
-    "main.44a55574.js.map": "/mbti-db/static/js/main.44a55574.js.map"
+    "main.a932d22f.js.map": "/mbti-db/static/js/main.a932d22f.js.map"
   },
   "entrypoints": [
     "static/css/main.067bb795.css",
-    "static/js/main.44a55574.js"
+    "static/js/main.a932d22f.js"
   ]
 }
