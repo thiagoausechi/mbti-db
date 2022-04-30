@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mbti-db/static/css/main.067bb795.css",
+    "main.js": "/mbti-db/static/js/main.44a55574.js",
+    "static/media/noise.png": "/mbti-db/static/media/noise.fc187c22e0c716848733.png",
+    "static/media/blank_avatar.svg": "/mbti-db/static/media/blank_avatar.23160a03a98bdc041e4a9f234bde614e.svg",
+    "index.html": "/mbti-db/index.html",
+    "main.067bb795.css.map": "/mbti-db/static/css/main.067bb795.css.map",
+    "main.44a55574.js.map": "/mbti-db/static/js/main.44a55574.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.067bb795.css",
+    "static/js/main.44a55574.js"
+  ]
+}
