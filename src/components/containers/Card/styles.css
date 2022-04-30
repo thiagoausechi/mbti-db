@@ -27,7 +27,6 @@
 }
 
 .card-icon {
-    height: var(--h-size-3);
     width: 100%;
 
     display: flex;
@@ -36,7 +35,7 @@
 }
 
 .card-icon img,
-.card-icon svg {
+svg {
     margin-top: 2.5%;
 }
 
@@ -48,6 +47,7 @@
 .card-lower-third {
     display: flex;
     justify-content: space-between;
+    height: 0px;
 }
 
 .card-type {

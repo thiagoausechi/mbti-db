@@ -40,7 +40,7 @@ const LoadingPlaceholder = ({ large }) =>
     }
 
     return (
-        <div className="loading-bar-placeholder"
+        <div className={`loading-bar-placeholder ${large ? "large-placeholder" : ""}`}
             style={{
                 width: large ? `${randomWidth()}px` : "65px",
                 height: large ? "24px" : "17px"

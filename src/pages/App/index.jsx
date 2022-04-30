@@ -60,7 +60,7 @@ function App()
             </div> : null
         }
         <div className="personas">
-          {personalities.length > 0 ? personalities.map((persona) =>
+          {(personalities.length > 0) ? personalities.map((persona) =>
             <Card key={persona.id} persona={persona} handleOpenEditModal={handleOpenEditModal} />) :
             [...Array(50).keys()].map((n) => <LoadingCard key={n} />)
           }
