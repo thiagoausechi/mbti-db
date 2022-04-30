@@ -1,0 +1,14 @@
+[ ] Arrumar Avatar Editor
+[ ] Melhorar salvamento de imagens (diminuir qualidade)
+
+[ ] Sistema de Pesquisa e Ordem
+
+[ ] Página com estatísticas
+
+[ ] Refatorar
+[ ] Reorganizar arquivos
+
+[ ] Revisar CSS + valores
+
+[ ] Testar em Mobile
+[ ]    - Modal

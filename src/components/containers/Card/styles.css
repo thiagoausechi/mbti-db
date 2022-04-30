@@ -1,61 +1,66 @@
-.card
-{
-    display: grid;
-    position: relative;
+.card-item {
+    height: var(--h-size-1);
+    width: calc(var(--h-size-1) * var(--ratio));
 
-    grid-template-columns: 132px 312px 312px 1fr;
-    grid-template-rows: 100px;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "icon persona type avatar"
-        "icon persona type avatar";
+    overflow: hidden;
 
-    padding: 5px;
-    margin-bottom: 10px;
     border-radius: 22px;
 }
 
-.card-title
-{
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+}
+
+.card-title {
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
 }
 
-.card-snippet
-{
+.card-snippet {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
 }
 
-.icon
-{
-    grid-area: icon;
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.card-icon {
+    height: var(--h-size-3);
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
-.persona
-{
-    grid-area: persona;
-
-    position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
+.card-icon img,
+.card-icon svg {
+    margin-top: 2.5%;
 }
 
-.type
-{
-    grid-area: type;
-
-    position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
+.card-persona {
+    padding-left: var(--h-size-5);
+    height: calc(var(--h-size-1) - (var(--h-size-3) * 2));
 }
 
-.avatar { grid-area: avatar; }
+.card-lower-third {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-type {
+    padding-left: var(--h-size-5);
+}
+
+.card-avatar {
+    justify-content: flex-end;
+}
+
+.card-avatar img {
+    object-fit: cover;
+    object-position: 0 -4%;
+    height: var(--h-size-3);
+    width: calc(var(--h-size-3) * var(--ratio));
+}

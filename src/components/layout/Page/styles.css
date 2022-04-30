@@ -1,0 +1,25 @@
+.wrapper {
+    width: fit-content;
+    margin: auto;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.header {
+    clear: both;
+    text-align: center;
+    font-size: 35px;
+    min-height: 64px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0px;
+}
+
+.credits {
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: 35px;
+    text-align: center;
+}

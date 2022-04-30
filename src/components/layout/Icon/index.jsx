@@ -7,7 +7,7 @@ const Icon = ({ icon, color }) =>
     return icon ?
         <img src={icon} alt="Person Avatar"
             style={{
-                width: '73px', height: '73px',
+                width: "73px", height: "73px",
                 borderRadius: "50%",
                 border: `3.5px solid ${color || "#51596A"}`
             }}

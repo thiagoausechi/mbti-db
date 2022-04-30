@@ -1,85 +1,143 @@
-.content {
+.modal-header {
+    height: var(--h-size-3);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-header-start {
+    flex-basis: var(--h-size-2);
+}
+
+.modal-header-end {
+    flex-basis: var(--h-size-2);
+}
+
+.modal-header-end-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.first-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1fr;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 92px;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
     grid-auto-flow: row;
     grid-template-areas:
-        "icon-selector icon-selector"
-        "name avatar"
-        "gender avatar"
-        "personality personality"
-        "mind mind-info"
-        "energy energy-info"
-        "nature nature-info"
-        "tactics tactics-info"
-        "identity identity-info"
-        "save save";
+        "main-info preview-card";
 }
 
-.icon-selector {
-    grid-area: icon-selector;
+.main-info {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "."
+        ".";
+    grid-area: main-info;
 }
 
-.name {
-    grid-area: name;
+.preview-card {
+    display: grid;
+
+    grid-template-columns: 275px auto;
+    grid-template-rows: 50% 50%;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". avatar-preview"
+        ". avatar-preview";
+    grid-area: preview-card;
+
+    border-radius: 22px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
-.gender {
-    grid-area: gender;
+.preview-card-type {
+    display: flex;
+    place-self: flex-end;
+
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: right;
 }
 
-.avatar {
-    grid-area: avatar;
+.preview-card-role {
+    display: flex;
+    justify-self: flex-end;
+    text-align: right;
+}
+
+.avatar-preview {
+    grid-area: avatar-preview;
+
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-preview img {
+    object-fit: cover;
+    object-position: 0 -4%;
+    height: var(--h-size-3);
+    width: calc(var(--h-size-3) * var(--ratio));
 }
 
 .personality {
     grid-area: personality;
 
+    display: flex;
+    align-items: flex-end;
+
+    height: var(--h-size-5);
+
     border-bottom: 2px solid #51596A;
-    margin-bottom: 10px;
+    margin-top: var(--h-size-6);
+    margin-bottom: var(--h-size-6);
 }
 
 .personality h3 {
-    margin-block-end: 0;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
 }
 
-.mind {
-    grid-area: mind;
-}
-
-.energy {
-    grid-area: energy;
-}
-
-.nature {
-    grid-area: nature;
-}
-
-.tactics {
-    grid-area: tactics;
-}
-
-.identity {
-    grid-area: identity;
-}
-
-.options {
+.option-section {
     display: grid;
+
+    margin-bottom: var(--h-size-6);
+
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 75px;
+    grid-template-areas:
+        "option option-info";
+}
+
+.option {
+    display: grid;
+    height: 95px;
     grid-template-columns: 3.3fr 0.5fr 0.5fr 0.5fr 0.5fr 0.7fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
+    grid-area: option;
 }
 
 .bar {
     grid-area: 2 / 1 / 3 / 6;
 
+    font-weight: 600;
+    font-size: 15px;
+
     background-color: #F2F1F2;
     border-radius: 15px;
 
-    padding-left: 12px;
-    padding-top: 5px;
+    padding-left: 16px;
+    padding-top: 7px;
 
     z-index: -1;
 }
@@ -126,40 +184,14 @@
     text-align: center;
 }
 
-.save {
-    grid-area: save;
-
-    margin: 5px auto;
-}
-
-.mind-info {
-    grid-area: mind-info;
-}
-
-.energy-info {
-    grid-area: energy-info;
-}
-
-.nature-info {
-    grid-area: nature-info;
-}
-
-.tactics-info {
-    grid-area: tactics-info;
-}
-
-.identity-info {
-    grid-area: identity-info;
-}
-
-.info {
-    font-size: 15px;
-    line-height: 14px;
+.option-info {
+    grid-area: option-info;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 
-
-
+/* Fix this part */
 .gender-control {
     position: relative;
 
