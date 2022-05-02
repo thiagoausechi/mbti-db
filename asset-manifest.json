@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mbti-db/static/css/main.0d09db17.css",
-    "main.js": "/mbti-db/static/js/main.bccadad3.js",
+    "main.css": "/mbti-db/static/css/main.6bcd1290.css",
+    "main.js": "/mbti-db/static/js/main.4e9925aa.js",
     "static/media/noise.png": "/mbti-db/static/media/noise.fc187c22e0c716848733.png",
     "static/media/intp_male.svg": "/mbti-db/static/media/intp_male.952377c9025759c93923.svg",
     "static/media/intj_female.svg": "/mbti-db/static/media/intj_female.a71bf1d9f684e98ea1cd.svg",
@@ -37,11 +37,11 @@
     "static/media/isfj_female.svg": "/mbti-db/static/media/isfj_female.d10daf0670077504d6bb.svg",
     "static/media/blank_avatar.svg": "/mbti-db/static/media/blank_avatar.23160a03a98bdc041e4a9f234bde614e.svg",
     "index.html": "/mbti-db/index.html",
-    "main.0d09db17.css.map": "/mbti-db/static/css/main.0d09db17.css.map",
-    "main.bccadad3.js.map": "/mbti-db/static/js/main.bccadad3.js.map"
+    "main.6bcd1290.css.map": "/mbti-db/static/css/main.6bcd1290.css.map",
+    "main.4e9925aa.js.map": "/mbti-db/static/js/main.4e9925aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d09db17.css",
-    "static/js/main.bccadad3.js"
+    "static/css/main.6bcd1290.css",
+    "static/js/main.4e9925aa.js"
   ]
 }
