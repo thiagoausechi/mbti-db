@@ -14,7 +14,9 @@ const AvatarEditor = ({ preview, src, type, closeIconEditor, saveIcon, onCrop, o
             <Avatar
                 width={390}
                 height={295}
-                exportAsSquare={true}
+                exportSize={75}
+                exportQuality={0.7}
+                exportAsSquare={false}
                 onCrop={onCrop}
                 onClose={onClose}
                 label={"Escolha um arquivo"}

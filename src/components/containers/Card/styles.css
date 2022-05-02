@@ -61,6 +61,6 @@ svg {
 .card-avatar img {
     object-fit: cover;
     object-position: 0 -4%;
-    height: var(--h-size-3);
+    /*height: var(--h-size-3);*/
     width: calc(var(--h-size-3) * var(--ratio));
 }

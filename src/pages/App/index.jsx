@@ -27,11 +27,18 @@ function App()
     {
       const data = await getDocs(DB_COLLECTION_REF);
       if (data.docs.length > 0)
-        setPersonalities(
+      {
+        const randomized =
           [
             ...data.docs.map((doc) => ({ ...doc.data(), id: doc.id })),
             ...generateDummies(false)
-          ]);
+          ]
+            .map(value => ({ value, sort: Math.random() }))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({ value }) => value)
+
+        setPersonalities(randomized);
+      }
     }
     getPersonalities();
   }, []);

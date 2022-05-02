@@ -85,7 +85,7 @@ export default class RegisterModal extends React.Component
 
     openIconEditor()
     {
-        this.setState({ showEditor: true, src: this.state.icon, preview: this.state.icon });
+        this.setState({ showEditor: true, preview: this.state.icon });
     }
 
     closeIconEditor()
