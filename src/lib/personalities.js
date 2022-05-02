@@ -14,6 +14,11 @@ export function getTypeOptions(type)
     return { mind: chars[0], energy: chars[1], nature: chars[2], tactics: chars[3] };
 }
 
+export function isValidType(type)
+{
+    return TYPES.hasOwnProperty(type);
+}
+
 const TYPES =
 {
     /* --------------------- ANALYSTS --------------------- */

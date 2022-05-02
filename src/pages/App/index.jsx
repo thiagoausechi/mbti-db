@@ -6,20 +6,21 @@ import { collection, getDocs } from "firebase/firestore";
 
 import Page from "../../components/layout/Page";
 import Card from "../../components/containers/Card";
-import Modal from "react-modal";
+import LoadingCard from "../../components/containers/LoadingCard";
 import RegisterModal from "../../components/containers/RegisterModal";
+import Modal from "react-modal";
 
+import TYPES from "../../lib/personalities";
 import { isDevEnv } from "../../lib/dev_env";
 import { generateDummies } from "../../lib/dummies";
-import LoadingCard from "../../components/containers/LoadingCard";
 
 Modal.setAppElement("#root");
 
 function App()
 {
-  const [personalities, setPersonalities] = useState([]);
   const [activePersona, setActivePersona] = useState({});
 
+  const [personalities, setPersonalities] = useState([]);
   useEffect(() =>
   {
     const DB_COLLECTION_REF = collection(db, "personalities");
@@ -43,8 +44,13 @@ function App()
     getPersonalities();
   }, []);
 
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [searchText, setSearchText] = useState("");
+  function handleSearchText(e)
+  {
+    setSearchText(e.target.value);
+  };
 
+  const [modalIsOpen, setIsOpen] = useState(false);
   function handleCloseModal() { setIsOpen(false); }
   function handleOpenModal()
   {
@@ -60,23 +66,76 @@ function App()
   return (
     <>
       <Page>
-        {
-          isDevEnv ?
-            <div className="top">
-              <button onClick={handleOpenModal}>+</button>
-            </div> : null
-        }
-        <div className="personas">
-          {(personalities.length > 0) ? personalities.map((persona) =>
-            <Card key={persona.id} persona={persona} handleOpenEditModal={handleOpenEditModal} />) :
-            [...Array(50).keys()].map((n) => <LoadingCard key={n} />)
+        <div className="top">
+          <input
+            type="text"
+            id="search"
+            className="textbox"
+            value={searchText}
+            onChange={handleSearchText}
+          />
+          {
+            isDevEnv ?
+              <button onClick={handleOpenModal}>+</button> : null
           }
         </div>
+        <PersonasList
+          personalities={personalities}
+          handleOpenEditModal={handleOpenEditModal}
+          search={searchText}
+        />
       </Page>
       <Modal isOpen={modalIsOpen} onRequestClose={handleCloseModal} style={modalStyle}>
         <RegisterModal state={activePersona} handleCloseModal={handleCloseModal} />
       </Modal>
     </>
+  );
+}
+
+function PersonasList({ personalities, handleOpenEditModal, search })
+{
+  const normalize = (str) => str.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
+
+  const filteredData = personalities.filter((e) =>
+  {
+    if (!search || search === '') return e;
+
+    const s = normalize(search);
+
+    // Pesquisa pelo Tipo da maneira complexa, ex.: >IxTJ ou >ExxP ou >xNxJ
+    if (s.charAt(0) === ">" &&
+      (new RegExp(`(${s.replace(">", "").replaceAll("x", ".")})+`)
+        .exec(e.type.toLowerCase()))) return e;
+
+    // Lista todos membros da Agência ao usar Arsmtrong ou AMST na pesquisa
+    if (("armstrong".includes(s) || "amst".includes(s)) &&
+      (
+        e.name === "Thiago Ausechi" ||
+        e.name === "Thiago Basílio" ||
+        e.name === "Ana Muraoka" ||
+        e.name === "Mari Alves" ||
+        e.name === "Lorena Garcia"
+      )) return e;
+
+    // Pesquisa pelo Nome da Pessoa ou pelo Tipo (simplificado, ex: ESFP)
+    if (normalize(e.name).includes(s) ||
+      e.type.toLowerCase().includes(s)) return e;
+
+    // Pesquisa pelo Nome do Tipo (ex. Arquiteto), ou Nome do Grupo (ex. Analistas)
+    if (normalize(TYPES[e.type].name.male).includes(s) ||
+      normalize(TYPES[e.type].name.female).includes(s) ||
+      normalize(TYPES[e.type].role.name).includes(s)) return e;
+
+    return e;
+  });
+
+  return (
+    <div className="personas">
+      {(personalities.length > 0) ? filteredData.map((persona) =>
+        <Card key={persona.id} persona={persona} handleOpenEditModal={handleOpenEditModal} />) :
+        [...Array(50).keys()].map((n) => <LoadingCard key={n} />)
+      }
+    </div>
   );
 }
 
