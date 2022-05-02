@@ -5,12 +5,10 @@ import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 
 import Page from "../../components/layout/Page";
-import Card from "../../components/containers/Card";
-import LoadingCard from "../../components/containers/LoadingCard";
+import PersonasList from "../../components/containers/PersonasList";
 import RegisterModal from "../../components/containers/RegisterModal";
 import Modal from "react-modal";
 
-import TYPES from "../../lib/personalities";
 import { isDevEnv } from "../../lib/dev_env";
 import { generateDummies } from "../../lib/dummies";
 
@@ -73,6 +71,11 @@ function App()
             className="textbox"
             value={searchText}
             onChange={handleSearchText}
+            style={{
+              width: '100%',
+              marginLeft: '10%',
+              marginRight: '10%'
+            }}
           />
           {
             isDevEnv ?
@@ -89,53 +92,6 @@ function App()
         <RegisterModal state={activePersona} handleCloseModal={handleCloseModal} />
       </Modal>
     </>
-  );
-}
-
-function PersonasList({ personalities, handleOpenEditModal, search })
-{
-  const normalize = (str) => str.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
-
-  const filteredData = personalities.filter((e) =>
-  {
-    if (!search || search === '') return e;
-
-    const s = normalize(search);
-
-    // Pesquisa pelo Tipo da maneira complexa, ex.: >IxTJ ou >ExxP ou >xNxJ
-    if (s.charAt(0) === ">" &&
-      (new RegExp(`(${s.replace(">", "").replaceAll("x", ".")})+`)
-        .exec(e.type.toLowerCase()))) return e;
-
-    // Lista todos membros da Agência ao usar Arsmtrong ou AMST na pesquisa
-    if (("armstrong".includes(s) || "amst".includes(s)) &&
-      (
-        e.name === "Thiago Ausechi" ||
-        e.name === "Thiago Basílio" ||
-        e.name === "Ana Muraoka" ||
-        e.name === "Mari Alves" ||
-        e.name === "Lorena Garcia"
-      )) return e;
-
-    // Pesquisa pelo Nome da Pessoa ou pelo Tipo (simplificado, ex: ESFP)
-    if (normalize(e.name).includes(s) ||
-      e.type.toLowerCase().includes(s)) return e;
-
-    // Pesquisa pelo Nome do Tipo (ex. Arquiteto), ou Nome do Grupo (ex. Analistas)
-    if (normalize(TYPES[e.type].name.male).includes(s) ||
-      normalize(TYPES[e.type].name.female).includes(s) ||
-      normalize(TYPES[e.type].role.name).includes(s)) return e;
-
-    return e;
-  });
-
-  return (
-    <div className="personas">
-      {(personalities.length > 0) ? filteredData.map((persona) =>
-        <Card key={persona.id} persona={persona} handleOpenEditModal={handleOpenEditModal} />) :
-        [...Array(50).keys()].map((n) => <LoadingCard key={n} />)
-      }
-    </div>
   );
 }
 

@@ -1,0 +1,4 @@
+.personas {
+    display: grid;
+    grid-gap: var(--h-size-6);
+}
