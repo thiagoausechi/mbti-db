@@ -22,7 +22,7 @@ function App()
   {
     const getPersonas = async () => 
     {
-      const data = getPersonalities();
+      const data = await getPersonalities();
       if (data.docs.length > 0)
       {
         const randomized =
