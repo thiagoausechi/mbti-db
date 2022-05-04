@@ -31,8 +31,8 @@ const ENGINES =
     // Pesquisa utilizando as palavras-chaves "Assertivo" e "Turbulento/Cauteloso"
     byIdentityKeyword: (e, s) =>
     {
-        if (("turbulento".includes(s) || "cauteloso".includes(s) || "-t".includes(s)) && e.identity === "T") return e;
-        if (("assertivo".includes(s) || "-a".includes(s)) && e.identity === "A") return e;
+        if (("turbulento".includes(s) || "cauteloso".includes(s) || "-t".includes(s)) && e.identity === "T") return true;
+        if (("assertivo".includes(s) || "-a".includes(s)) && e.identity === "A") return true;
         if ("!-".includes(s) && !e.identity) return true;
     },
 
