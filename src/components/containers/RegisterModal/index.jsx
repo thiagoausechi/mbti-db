@@ -2,11 +2,11 @@ import "./styles.css";
 
 import React from "react";
 
-import { db } from "../../../firebase-config";
-import { collection, doc, addDoc, updateDoc } from "firebase/firestore";
+import { createPersonality, deletePersonality, updatePersonality } from "../../../lib/backend";
 
 import { getTypeOptions } from "../../../lib/personalities";
 import { getType } from "./TypeOption";
+import { decode } from "../../../lib/cognitive_functions";
 
 import { ALL_SETTINGS } from "../../../lib/type_preferences";
 
@@ -58,6 +58,7 @@ export default class RegisterModal extends React.Component
         // TODO Ver se tem como jogar isso aqui em outra classe
         this.handleChange = this.handleChange.bind(this);
         this.handleSave = this.handleSave.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
 
         this.openIconEditor = this.openIconEditor.bind(this);
         this.closeIconEditor = this.closeIconEditor.bind(this);
@@ -130,9 +131,20 @@ export default class RegisterModal extends React.Component
             identity: identity
         };
 
-        if (id) await updateDoc(doc(db, "personalities", id), data);
-        else await addDoc(collection(db, "personalities"), data);
+        if (id) await updatePersonality(id, data)
+        else await createPersonality(data);
         window.location.reload();
+    }
+
+    async handleDelete(e)
+    {
+        e.preventDefault();
+
+        if (this.state.id)
+        {
+            await deletePersonality(this.state.id);
+            window.location.reload();
+        }
     }
 
     render()
@@ -194,7 +206,7 @@ export default class RegisterModal extends React.Component
                                     <div className="main-info-gender">
                                         <strong>Sexo:</strong>
 
-                                        <label className="gender-control gender-control-radio">
+                                        <label className="radio-control radio-control-radio">
                                             Masculino
                                             <input
                                                 type="radio"
@@ -204,10 +216,10 @@ export default class RegisterModal extends React.Component
                                                 onChange={this.handleChange}
                                                 checked={this.state.gender === "male"}
                                             />
-                                            <div className="gender-control-indicator"></div>
+                                            <div className="radio-control-indicator"></div>
                                         </label>
 
-                                        <label className="gender-control gender-control-radio">
+                                        <label className="radio-control radio-control-radio">
                                             Feminino
                                             <input
                                                 type="radio"
@@ -216,7 +228,7 @@ export default class RegisterModal extends React.Component
                                                 value="female"
                                                 onChange={this.handleChange}
                                                 checked={this.state.gender === "female"} />
-                                            <div className="gender-control-indicator"></div>
+                                            <div className="radio-control-indicator"></div>
                                         </label>
                                     </div>
                                 </div>
@@ -229,7 +241,8 @@ export default class RegisterModal extends React.Component
                                                 {type.name[this.state.gender]}
                                             </div>
                                             <div className="preview-card-role">
-                                                {type.role.name}
+                                                {type.role.name} <br />
+                                                {decode(type.initials).phrase}
                                             </div>
                                             <div className="avatar-preview">
                                                 <img src={AVATARS[`${type.initials.toLowerCase()}_${this.state.gender}`]}
@@ -252,6 +265,17 @@ export default class RegisterModal extends React.Component
                                         state={this.state}
                                     />)}
                             </div>
+                            {this.state.id ?
+                                <div style={{ display: "flex", marginTop: "var(--h-size-6)" }}>
+                                    <button
+                                        className="delete"
+                                        onClick={this.handleDelete}
+                                    >
+                                        EXCLUIR
+                                    </button>
+                                </div> : null
+                            }
+                            <div style={{ height: "var(--h-size-6)" }}></div>
                         </form >
                 }
             </div >

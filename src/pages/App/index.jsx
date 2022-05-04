@@ -1,8 +1,6 @@
 import "./styles.css";
 
 import { useState, useEffect } from "react";
-import { db } from "../../firebase-config";
-import { collection, getDocs } from "firebase/firestore";
 
 import Page from "../../components/layout/Page";
 import PersonasList from "../../components/containers/PersonasList";
@@ -10,6 +8,7 @@ import RegisterModal from "../../components/containers/RegisterModal";
 import Modal from "react-modal";
 
 import { isDevEnv } from "../../lib/dev_env";
+import { getPersonalities } from "../../lib/backend";
 import { generateDummies } from "../../lib/dummies";
 
 Modal.setAppElement("#root");
@@ -21,10 +20,9 @@ function App()
   const [personalities, setPersonalities] = useState([]);
   useEffect(() =>
   {
-    const DB_COLLECTION_REF = collection(db, "personalities");
-    const getPersonalities = async () => 
+    const getPersonas = async () => 
     {
-      const data = await getDocs(DB_COLLECTION_REF);
+      const data = getPersonalities();
       if (data.docs.length > 0)
       {
         const randomized =
@@ -39,7 +37,7 @@ function App()
         setPersonalities(randomized);
       }
     }
-    getPersonalities();
+    getPersonas();
   }, []);
 
   const [searchText, setSearchText] = useState("");

@@ -1,11 +1,11 @@
 import { ANALYSTS, DIPLOMATS, SENTINELS, EXPLORERS } from "./roles";
 
 /*
-    mind: i - e
-    energy: s - n
-    nature: f - t
-    tactics: p - j
-    identity: a - t
+    mind: I - E
+    energy: S - n
+    nature: F - T
+    tactics: P - J
+    identity: A - A
 */
 
 export function getTypeOptions(type)
@@ -31,7 +31,8 @@ const TYPES =
             female: "Arquiteta"
         },
         role: ANALYSTS,
-        snippet: "Pensadores criativos e estratégicos, com um plano para tudo."
+        snippet: "Pensadores criativos e estratégicos, com um plano para tudo.",
+        motto: "Eu sei a melhor forma de fazer algo."
     },
 
     INTP:
@@ -43,7 +44,8 @@ const TYPES =
             female: "Lógico"
         },
         role: ANALYSTS,
-        snippet: "Criadores inovadores com uma sede insaciável por conhecimento."
+        snippet: "Criadores inovadores com uma sede insaciável por conhecimento.",
+        motto: "Vou analisar o que é fato ou sem fundamento."
     },
 
     ENTJ:
@@ -55,7 +57,8 @@ const TYPES =
             female: "Comandanta"
         },
         role: ANALYSTS,
-        snippet: "Líderes ousados, criativos e enérgicos, sempre dando um jeito em tudo."
+        snippet: "Líderes ousados, criativos e enérgicos, sempre dando um jeito em tudo.",
+        motto: "Eu te direi o que fazer."
     },
 
     ENTP:
@@ -67,7 +70,8 @@ const TYPES =
             female: "Inovadora"
         },
         role: ANALYSTS,
-        snippet: "Pensadores espertos e curiosos que não resistem um desafio intelectual."
+        snippet: "Pensadores espertos e curiosos que não resistem um desafio intelectual.",
+        motto: "Nada é verdade, tudo depende."
     },
 
     /* --------------------- DIPLOMATS --------------------- */
@@ -80,7 +84,8 @@ const TYPES =
             female: "Advogada"
         },
         role: DIPLOMATS,
-        snippet: "Idealistas quietos e místicos, porém muito inspiradores e incansáveis."
+        snippet: "Idealistas quietos e místicos, porém muito inspiradores e incansáveis.",
+        motto: "O mundo pode ser um lugar melhor."
     },
 
     INFP:
@@ -92,7 +97,8 @@ const TYPES =
             female: "Mediadora"
         },
         role: DIPLOMATS,
-        snippet: "Pessoas poéticas, bondosas e altruístas, sempre prontas para ajudar uma boa causa."
+        snippet: "Pessoas poéticas, bondosas e altruístas, sempre prontas para ajudar uma boa causa.",
+        motto: "Num mundo ideal todos se respeitam."
     },
 
     ENFJ:
@@ -104,7 +110,8 @@ const TYPES =
             female: "Protagonista"
         },
         role: DIPLOMATS,
-        snippet: "Líderes inspiradores e carismáticos, que conseguem hipnotizar sua audiência."
+        snippet: "Líderes inspiradores e carismáticos, que conseguem hipnotizar sua audiência.",
+        motto: "Quero que todos estejam bem."
     },
 
     ENFP:
@@ -116,7 +123,8 @@ const TYPES =
             female: "Ativista"
         },
         role: DIPLOMATS,
-        snippet: "Espíritos livres, criativos, sociáveis e entusiasmáticos, sempre encontrando uma razão para sorrir."
+        snippet: "Espíritos livres, criativos, sociáveis e entusiasmáticos, sempre encontrando uma razão para sorrir.",
+        motto: "A vida só é boa se feita para pessoas."
     },
 
     /* --------------------- SENTINELS --------------------- */
@@ -129,7 +137,8 @@ const TYPES =
             female: "Logístico"
         },
         role: SENTINELS,
-        snippet: "Indivíduos práticos e extremamente confiáveis."
+        snippet: "Indivíduos práticos e extremamente confiáveis.",
+        motto: "O dever primeiro."
     },
 
     ISFJ:
@@ -141,7 +150,8 @@ const TYPES =
             female: "Defensora"
         },
         role: SENTINELS,
-        snippet: "Protetores dedicados e acolhedores, estão sempre prontos para defender seus amados."
+        snippet: "Protetores dedicados e acolhedores, estão sempre prontos para defender seus amados.",
+        motto: "Estou aqui para te ajudar, seja como for."
     },
 
     ESTJ:
@@ -153,7 +163,8 @@ const TYPES =
             female: "Executiva"
         },
         role: SENTINELS,
-        snippet: "Administradores excelentes, inigualáveis em gerenciar coisas - ou pessoas."
+        snippet: "Administradores excelentes, inigualáveis em gerenciar coisas - ou pessoas.",
+        motto: "Vamos fazer um trabalho bem feito."
     },
 
     ESFJ:
@@ -165,7 +176,8 @@ const TYPES =
             female: "Cônsul"
         },
         role: SENTINELS,
-        snippet: "Pessoas extraordinariamente atenciosas, sociais e populares, sempre prontas para ajudar."
+        snippet: "Pessoas extraordinariamente atenciosas, sociais e populares, sempre prontas para ajudar.",
+        motto: "Deixe-me lhe servir."
     },
 
     /* --------------------- EXPLORERS --------------------- */
@@ -178,7 +190,8 @@ const TYPES =
             female: "Virtuosa"
         },
         role: EXPLORERS,
-        snippet: "Experimentadores práticos e ousados, mestres em todos tipos de ferramentas."
+        snippet: "Experimentadores práticos e ousados, mestres em todos tipos de ferramentas.",
+        motto: "Deixe comigo. Eu sei o que fazer."
     },
 
     ISFP:
@@ -190,7 +203,8 @@ const TYPES =
             female: "Aventureira"
         },
         role: EXPLORERS,
-        snippet: "Artistas flexíveis e charmosos, sempre prontos para explorar e experimentar algo novo."
+        snippet: "Artistas flexíveis e charmosos, sempre prontos para explorar e experimentar algo novo.",
+        motto: "Vamos criar alguma coisa."
     },
 
     ESTP:
@@ -202,7 +216,8 @@ const TYPES =
             female: "Empresária"
         },
         role: EXPLORERS,
-        snippet: "Pessoas inteligentes, enérgicas e perceptivas, que realmente gostam de arriscar."
+        snippet: "Pessoas inteligentes, enérgicas e perceptivas, que realmente gostam de arriscar.",
+        motto: "Eu posso tudo!"
     },
 
     ESFP:
@@ -214,7 +229,8 @@ const TYPES =
             female: "Animadora"
         },
         role: EXPLORERS,
-        snippet: "Animadores entusiasmados, enérgicos e espontâneos - a vida nunca fica entediante perto deles."
+        snippet: "Animadores entusiasmados, enérgicos e espontâneos - a vida nunca fica entediante perto deles.",
+        motto: "O momento perfeito é agora!"
     }
 }
 
