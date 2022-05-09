@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mbti-db/static/css/main.2ff5e465.css",
-    "main.js": "/mbti-db/static/js/main.e824b777.js",
+    "main.js": "/mbti-db/static/js/main.b8f8e7e3.js",
     "static/media/noise.png": "/mbti-db/static/media/noise.fc187c22e0c716848733.png",
     "static/media/intp_male.svg": "/mbti-db/static/media/intp_male.469ad41a6672e2bf8229.svg",
     "static/media/intj_female.svg": "/mbti-db/static/media/intj_female.dedce1282d7fbffbf239.svg",
@@ -46,10 +46,10 @@
     "index.html": "/mbti-db/index.html",
     "static/media/Ni.svg": "/mbti-db/static/media/Ni.f115084abb559ccc1918.svg",
     "main.2ff5e465.css.map": "/mbti-db/static/css/main.2ff5e465.css.map",
-    "main.e824b777.js.map": "/mbti-db/static/js/main.e824b777.js.map"
+    "main.b8f8e7e3.js.map": "/mbti-db/static/js/main.b8f8e7e3.js.map"
   },
   "entrypoints": [
     "static/css/main.2ff5e465.css",
-    "static/js/main.e824b777.js"
+    "static/js/main.b8f8e7e3.js"
   ]
 }
