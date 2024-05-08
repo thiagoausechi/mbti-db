@@ -1,3 +1,4 @@
 import ReactDOM from "react-dom/client";
+import { Router } from "./routes/router";
 
-ReactDOM.createRoot(document.getElementById("root")!).render("App is running!");
+ReactDOM.createRoot(document.getElementById("root")!).render(<Router />);
