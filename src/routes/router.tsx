@@ -1,12 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <div>App is running!</div>,
-  },
-]);
+import { publicRoutes } from "./public-routes";
 
 export const Router: React.FC = () => {
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={createBrowserRouter([...publicRoutes()])} />;
 };
