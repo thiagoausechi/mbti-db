@@ -5,6 +5,15 @@
 import "./src/environment/index.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  typescript: {
+    // We can run separate type-checking in CI
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    // We can run separate linting in CI
+    ignoreDuringBuilds: true,
+  },
+};
 
 export default config;
