@@ -9,6 +9,7 @@ import {
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
+  darkMode: ["class"],
   content: ["./src/**/*.tsx"],
   theme: {
     container: {
