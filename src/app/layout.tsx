@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" suppressHydrationWarning className={openSans.variable}>
-      <body className="bg-background text-foreground font-sans antialiased">
+      <body className="bg-background font-sans text-foreground antialiased">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
