@@ -104,7 +104,7 @@
   .dark & {
     --background: var(--diplomats-900);
     --foreground: var(--diplomats-200);
-    --relief-light: var(--diplomats-800);
+    --relief-light: var(--diplomats-700);
     --relief-dark: var(--diplomats-950);
   }
 }
@@ -118,7 +118,7 @@
     --background: var(--sentinels-950);
     --foreground: var(--sentinels-200);
     --relief-light: var(--sentinels-900);
-    --relief-dark: #var(--sentinels-900);
+    --relief-dark: #111c32;
   }
 }
 .explorers {
