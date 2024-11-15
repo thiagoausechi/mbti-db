@@ -2,6 +2,7 @@ import "~/client/styles/globals.css";
 
 import { type Metadata } from "next";
 import type { PropsWithChildren } from "react";
+import { ThemeProvider } from "~/client/components/theme-provider";
 import { openSans } from "~/client/styles/fonts";
 
 export const metadata: Metadata = {
@@ -45,8 +46,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en" className={openSans.variable}>
-      <body className="font-sans">{children}</body>
+    <html lang="en" suppressHydrationWarning className={openSans.variable}>
+      <body className="bg-background text-foreground font-sans antialiased">
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
