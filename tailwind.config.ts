@@ -93,6 +93,12 @@ export default {
         950: "var(--explorers-950)",
       },
     },
+    boxShadow: {
+      relief: [
+        "4px 4px 8px 0px var(--relief-dark)",
+        "-4px -4px 6px 0px var(--relief-light)",
+      ],
+    },
     extend: {
       fontFamily: {
         sans: ["var(--font-opensans)", ...fontFamily.sans],
