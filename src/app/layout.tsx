@@ -2,6 +2,7 @@ import "~/client/styles/globals.css";
 
 import { type Metadata } from "next";
 import type { PropsWithChildren } from "react";
+import { openSans } from "~/client/styles/fonts";
 
 export const metadata: Metadata = {
   title: "mbti db",
@@ -44,8 +45,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className={openSans.variable}>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }
