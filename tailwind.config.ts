@@ -98,6 +98,10 @@ export default {
         "4px 4px 8px 0px var(--relief-dark)",
         "-4px -4px 6px 0px var(--relief-light)",
       ],
+      "relief-inner": [
+        "inset 4px 4px 8px 0px var(--relief-dark)",
+        "inset -4px -4px 6px 0px var(--relief-light)",
+      ],
     },
     extend: {
       fontFamily: {
