@@ -103,6 +103,12 @@ export default {
         "inset -4px -4px 6px 0px var(--relief-light)",
       ],
     },
+    dropShadow: {
+      relief: [
+        "1px 1px 3px var(--relief-dark)",
+        "-2px -2px 2px var(--relief-light)",
+      ],
+    },
     extend: {
       fontFamily: {
         sans: ["var(--font-opensans)", ...fontFamily.sans],
