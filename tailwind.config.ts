@@ -1,4 +1,6 @@
 import { type Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
+
 import {
   black,
   current,
@@ -109,11 +111,26 @@ export default {
         "-2px -2px 2px var(--relief-light)",
       ],
     },
+    textShadow: {
+      relief:
+        "1px 1px 3px var(--relief-dark), -2px -2px 2px var(--relief-light)",
+    },
     extend: {
       fontFamily: {
         sans: ["var(--font-opensans)", ...fontFamily.sans],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin((p) => {
+      p.matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value as string,
+          }),
+        },
+        { values: p.theme("textShadow") },
+      );
+    }),
+  ],
 } satisfies Config;
