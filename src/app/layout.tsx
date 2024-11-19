@@ -4,6 +4,7 @@ import { type Metadata } from "next";
 import type { PropsWithChildren } from "react";
 import { ThemeProvider } from "~/client/components/theme-provider";
 import { openSans } from "~/client/styles/fonts";
+import { twx } from "~/client/utils";
 
 export const metadata: Metadata = {
   title: "mbti db",
@@ -47,9 +48,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" suppressHydrationWarning className={openSans.variable}>
-      <body className="bg-background font-sans text-foreground antialiased">
+      <Body>
         <ThemeProvider>{children}</ThemeProvider>
-      </body>
+      </Body>
     </html>
   );
 }
+
+const Body = twx.body`bg-background font-sans font-bold text-foreground antialiased`;
