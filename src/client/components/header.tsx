@@ -38,6 +38,6 @@ export function Header() {
   );
 }
 
-const Wrapper = twx.header`container sticky top-0 z-50 flex md:pt-8`;
+const Wrapper = twx.header`md:container sticky top-0 z-50 flex md:pt-8`;
 const Content = twx.div`grid flex-grow grid-cols-2 items-center rounded-b-2xl p-6 backdrop-blur-lg transition-colors duration-500 md:rounded-2xl`;
 const LeftSide = twx.div`flex gap-6`;
