@@ -31,10 +31,10 @@ const Wrapper = twx(
 )`relative flex h-fit w-fit shrink-0 overflow-hidden rounded-full bg-background p-2 shadow-relief`;
 const Image = twx(
   AvatarPrimitive.Image,
-)`ring-1 ring-white aspect-square h-full w-full`;
+)`ring-1 ring-white aspect-square h-14 w-14 rounded-full object-cover`;
 const Fallback = twx(
   AvatarPrimitive.Fallback,
-)`bg-muted flex h-full w-full items-center justify-center rounded-full bg-foreground p-3.5 ring-1 ring-white`;
+)`bg-muted flex h-full w-full items-center justify-center rounded-full bg-foreground p-3 ring-1 ring-white`;
 const UserIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} fill="none">
     <path
