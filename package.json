@@ -20,6 +20,9 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache"
   },
   "dependencies": {
+    "@clerk/localizations": "^3.6.4",
+    "@clerk/nextjs": "^6.4.0",
+    "@clerk/types": "^4.34.0",
     "@radix-ui/react-avatar": "^1.1.1",
     "@t3-oss/env-nextjs": "^0.10.1",
     "class-variance-authority": "^0.7.0",
