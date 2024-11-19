@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Navbar } from "~/client/components/navbar";
 import { twx } from "~/client/utils";
 import { home } from "~/router/routes";
 
@@ -32,6 +33,7 @@ export function Header() {
               alt="Website logo"
             />
           </Link>
+          <Navbar />
         </LeftSide>
       </Content>
     </Wrapper>
