@@ -10,7 +10,7 @@ import { twx } from "../utils";
 
 interface AvatarProps
   extends ComponentPropsWithoutRef<typeof AvatarPrimitive.Root> {
-  imageSrc: string;
+  imageSrc?: string;
 }
 
 export const Avatar = forwardRef<
