@@ -2,6 +2,7 @@ import "~/client/styles/globals.css";
 
 import { type Metadata } from "next";
 import type { PropsWithChildren } from "react";
+import { Header } from "~/client/components/header";
 import { ThemeProvider } from "~/client/components/theme-provider";
 import { openSans } from "~/client/styles/fonts";
 import { twx } from "~/client/utils";
@@ -49,7 +50,10 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" suppressHydrationWarning className={openSans.variable}>
       <Body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
       </Body>
     </html>
   );
