@@ -1,7 +1,9 @@
+import { Main } from "~/client/components/main";
+
 export default function HomePage() {
   return (
-    <main className="container">
+    <Main>
       <p>Hello, home page!</p>
-    </main>
+    </Main>
   );
 }
