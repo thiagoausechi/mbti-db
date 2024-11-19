@@ -129,7 +129,7 @@
 
   .dark & {
     --background: var(--explorers-950);
-    --foreground: var(--explorers-200);
+    --foreground: var(--explorers-100);
     --relief-light: var(--explorers-900);
     --relief-dark: #321201;
   }
