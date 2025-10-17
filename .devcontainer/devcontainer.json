@@ -1,0 +1,60 @@
+{
+  "name": "Next.js (pnpm)",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "node",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Next.js App",
+      "onAutoForward": "openBrowser"
+    }
+  },
+
+  "features": {
+    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
+      "setLocale": true,
+      "theme": "robbyrussell",
+      "plugins": "git docker",
+      "desiredLocale": "en_US.UTF-8 UTF-8"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/bin/zsh"
+          }
+        }
+      },
+
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "PKief.material-icon-theme",
+        "vivaxy.vscode-conventional-commits",
+        "kamikillerto.vscode-colorize",
+        "DavidAnson.vscode-markdownlint",
+        "Cardinal90.multi-cursor-case-preserve",
+        "christian-kohler.path-intellisense",
+        "rvest.vs-code-prettier-eslint",
+        "MylesMurphy.prettify-ts",
+        "YoavBls.pretty-ts-errors",
+        "bradlc.vscode-tailwindcss",
+        "esdete.tailwind-rainbow",
+        "meganrogge.template-string-converter",
+        "aaron-bond.better-comments",
+        "EditorConfig.EditorConfig"
+      ]
+    }
+  },
+
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=${localWorkspaceFolderBasename}-pnpm-store,target=${containerWorkspaceFolder}/.pnpm-store,type=volume",
+    "source=${localEnv:USERPROFILE}/.gitconfig,target=/home/node/.gitconfig,type=bind,consistency=cached"
+  ],
+
+  "postCreateCommand": "sudo chown -R node:node ${containerWorkspaceFolder}/node_modules ${containerWorkspaceFolder}/.pnpm-store && pnpm install"
+}
