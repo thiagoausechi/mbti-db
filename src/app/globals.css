@@ -92,6 +92,8 @@
     inset -4px -4px 6px 0px var(--effect-neumorphic-light);
   --drop-shadow-neumorphic: 1px 1px 3px var(--effect-neumorphic-dark),
     -2px -2px 2px var(--effect-neumorphic-light);
+  --text-shadow-neumorphic: 1px 1px 3px var(--effect-neumorphic-dark),
+    -2px -2px 2px var(--effect-neumorphic-light);
 
   --font-sans: var(--font-open-sans);
 }
