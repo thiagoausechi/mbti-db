@@ -3,6 +3,72 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Neutral colors */
+  --neutral-50: oklch(0.976 0.003 264.7);
+  --neutral-100: oklch(0.949 0.004 271.53);
+  --neutral-200: oklch(0.888 0.009 264.56);
+  --neutral-300: oklch(0.788 0.017 262.76);
+  --neutral-400: oklch(0.665 0.027 263.27);
+  --neutral-500: oklch(0.568 0.032 263.31);
+  --neutral-600: oklch(0.463 0.029 265.34);
+  --neutral-700: oklch(0.423 0.027 265.49);
+  --neutral-800: oklch(0.382 0.022 264.28);
+  --neutral-900: oklch(0.349 0.018 268.17);
+  --neutral-950: oklch(0.27 0.013 272.88);
+
+  /* Analysts colors */
+  --analysts-50: oklch(0.98 0.008 308.58);
+  --analysts-100: oklch(0.953 0.021 306.92);
+  --analysts-200: oklch(0.915 0.037 306.45);
+  --analysts-300: oklch(0.847 0.067 306.67);
+  --analysts-400: oklch(0.749 0.114 307.35);
+  --analysts-500: oklch(0.651 0.155 306.57);
+  --analysts-600: oklch(0.556 0.183 305.87);
+  --analysts-700: oklch(0.503 0.169 306.45);
+  --analysts-800: oklch(0.448 0.139 307.81);
+  --analysts-900: oklch(0.391 0.115 308.92);
+  --analysts-950: oklch(0.292 0.105 307.63);
+
+  /* Diplomats colors */
+  --diplomats-50: oklch(0.975 0.014 162.33);
+  --diplomats-100: oklch(0.939 0.033 159.34);
+  --diplomats-200: oklch(0.881 0.061 161.13);
+  --diplomats-300: oklch(0.798 0.092 161.91);
+  --diplomats-400: oklch(0.701 0.115 161.52);
+  --diplomats-500: oklch(0.643 0.124 161.01);
+  --diplomats-600: oklch(0.521 0.103 161.5);
+  --diplomats-700: oklch(0.445 0.083 163.78);
+  --diplomats-800: oklch(0.382 0.067 165.28);
+  --diplomats-900: oklch(0.339 0.058 166.55);
+  --diplomats-950: oklch(0.237 0.036 170.19);
+
+  /* Sentinels colors */
+  --sentinels-50: oklch(0.975 0.012 239.86);
+  --sentinels-100: oklch(0.941 0.026 242.73);
+  --sentinels-200: oklch(0.896 0.047 243.4);
+  --sentinels-300: oklch(0.834 0.077 239.52);
+  --sentinels-400: oklch(0.731 0.122 243.79);
+  --sentinels-500: oklch(0.667 0.146 251.16);
+  --sentinels-600: oklch(0.592 0.166 256.81);
+  --sentinels-700: oklch(0.531 0.169 259.85);
+  --sentinels-800: oklch(0.461 0.141 261.19);
+  --sentinels-900: oklch(0.408 0.107 260.19);
+  --sentinels-950: oklch(0.301 0.068 262.48);
+
+  /* Explorers colors */
+  --explorers-50: oklch(0.982 0.026 92.36);
+  --explorers-100: oklch(0.96 0.05 89.74);
+  --explorers-200: oklch(0.93 0.089 89.91);
+  --explorers-300: oklch(0.9 0.122 88.79);
+  --explorers-400: oklch(0.869 0.147 85.8);
+  --explorers-500: oklch(0.841 0.164 82.45);
+  --explorers-600: oklch(0.663 0.164 54.79);
+  --explorers-700: oklch(0.554 0.152 46.52);
+  --explorers-800: oklch(0.47 0.131 43.66);
+  --explorers-900: oklch(0.412 0.111 43.62);
+  --explorers-950: oklch(0.279 0.077 44.78);
+
+  /* Colors */
   --background: #ffffff;
   --foreground: #171717;
 }
