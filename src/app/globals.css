@@ -71,16 +71,28 @@
   /* Colors */
   --background: var(--neutral-100);
   --foreground: var(--neutral-600);
+  --effect-neumorphic-light: var(--color-white);
+  --effect-neumorphic-dark: oklab(27.88% -0.01515 -0.08042 / 0.2);
 }
 
 .dark {
   --background: var(--neutral-950);
   --foreground: var(--neutral-200);
+  --effect-neumorphic-light: var(--neutral-900);
+  --effect-neumorphic-dark: oklab(22.8% -0.00379 -0.00317);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --shadow-elevation-neumorphic: 4px 4px 8px 0px var(--effect-neumorphic-dark),
+    -4px -4px 6px 0px var(--effect-neumorphic-light);
+  --shadow-depth-neumorphic: inset 4px 4px 8px 0px var(--effect-neumorphic-dark),
+    inset -4px -4px 6px 0px var(--effect-neumorphic-light);
+  --drop-shadow-neumorphic: 1px 1px 3px var(--effect-neumorphic-dark),
+    -2px -2px 2px var(--effect-neumorphic-light);
+
   --font-sans: var(--font-open-sans);
 }
 
