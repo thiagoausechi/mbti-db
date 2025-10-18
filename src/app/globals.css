@@ -82,6 +82,62 @@
   --effect-neumorphic-dark: oklab(22.8% -0.00379 -0.00317);
 }
 
+.analysts {
+  --background: var(--analysts-200);
+  --foreground: var(--analysts-600);
+  --effect-neumorphic-light: var(--analysts-50);
+  --effect-neumorphic-dark: var(--analysts-300);
+
+  .dark & {
+    --background: var(--analysts-950);
+    --foreground: var(--analysts-200);
+    --effect-neumorphic-light: var(--analysts-900);
+    --effect-neumorphic-dark: oklab(21.89597% 0.04231 -0.05579);
+  }
+}
+
+.diplomats {
+  --background: var(--diplomats-100);
+  --foreground: var(--diplomats-500);
+  --effect-neumorphic-light: var(--diplomats-50);
+  --effect-neumorphic-dark: var(--diplomats-200);
+
+  .dark & {
+    --background: var(--diplomats-900);
+    --foreground: var(--diplomats-200);
+    --effect-neumorphic-light: var(--diplomats-700);
+    --effect-neumorphic-dark: var(--diplomats-950);
+  }
+}
+
+.sentinels {
+  --background: var(--sentinels-100);
+  --foreground: var(--sentinels-400);
+  --effect-neumorphic-light: var(--sentinels-50);
+  --effect-neumorphic-dark: var(--sentinels-200);
+
+  .dark & {
+    --background: var(--sentinels-950);
+    --foreground: var(--sentinels-200);
+    --effect-neumorphic-light: var(--sentinels-900);
+    --effect-neumorphic-dark: oklab(22.871% -0.00548 -0.04548);
+  }
+}
+
+.explorers {
+  --background: var(--explorers-100);
+  --foreground: var(--explorers-500);
+  --effect-neumorphic-light: var(--explorers-50);
+  --effect-neumorphic-dark: var(--explorers-200);
+
+  .dark & {
+    --background: var(--explorers-950);
+    --foreground: var(--explorers-100);
+    --effect-neumorphic-light: var(--explorers-900);
+    --effect-neumorphic-dark: oklab(22.88% 0.03955 0.0446);
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
