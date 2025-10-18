@@ -1,6 +1,10 @@
 {
+  "Metadata": {
+    "title": "mbti-db",
+    "description": "A database for MBTI types, cognitive functions, and related information."
+  },
   "HomePage": {
-    "title": "Welcome to MBTI DB!",
+    "title": "Welcome to mbti-db!",
     "subtitle": "This is still a work in progress."
   }
 }
