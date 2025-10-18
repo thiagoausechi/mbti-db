@@ -46,7 +46,7 @@ export async function generateMetadata(
 export default function RootLayout({ children }: LayoutProps<"/[locale]">) {
   return (
     <html>
-      <body className={`${openSans.variable} antialiased`}>
+      <body className={`${openSans.variable}`}>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
