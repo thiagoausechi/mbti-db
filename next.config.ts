@@ -1,3 +1,6 @@
+import "~/shared/environment/client";
+import "~/shared/environment/server";
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
