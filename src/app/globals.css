@@ -69,13 +69,13 @@
   --explorers-950: oklch(0.279 0.077 44.78);
 
   /* Colors */
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--neutral-100);
+  --foreground: var(--neutral-600);
 }
 
 .dark {
-  --background: #171717;
-  --foreground: #ffffff;
+  --background: var(--neutral-950);
+  --foreground: var(--neutral-200);
 }
 
 @theme inline {
