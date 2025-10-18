@@ -151,6 +151,10 @@
   --text-shadow-neumorphic: 1px 1px 3px var(--effect-neumorphic-dark),
     -2px -2px 2px var(--effect-neumorphic-light);
 
+  --spacing-layout: calc(var(--spacing) * 4);
+  --spacing-surface: calc(var(--spacing) * 8);
+  --radius-surface: calc(var(--spacing) * 16);
+
   --font-sans: var(--font-open-sans);
 }
 
