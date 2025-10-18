@@ -22,6 +22,24 @@ export async function generateMetadata(
   return {
     title: t("title"),
     description: t("description"),
+    applicationName: "mbti-db",
+    creator: "Thiago Ausechi",
+    authors: [
+      { name: "Thiago Ausechi", url: "https://github.com/thiagoausechi" },
+    ],
+    keywords: [
+      "mbti",
+      "Myers-Briggs Type Indicator",
+      "database",
+      "banco de dados",
+      "collection",
+      "acervo",
+      "personalidades",
+      "personalities",
+      "rede social",
+      "social network",
+      "social",
+    ],
   };
 }
 
