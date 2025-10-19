@@ -71,6 +71,7 @@
 
   /* Colors */
   --light-tone: var(--neutral-100);
+  --light-tone-muted: var(--neutral-400);
   --dark-tone: var(--neutral-600);
   --effect-neumorphic-light: var(--color-white);
   --effect-neumorphic-dark: oklab(27.88% -0.01515 -0.08042 / 0.2);
@@ -141,6 +142,7 @@
 
 @theme inline {
   --color-light-tone: var(--light-tone);
+  --color-light-tone-muted: var(--light-tone-muted);
   --color-dark-tone: var(--dark-tone);
 
   --shadow-elevation-neumorphic: 4px 4px 8px 0px var(--effect-neumorphic-dark),
