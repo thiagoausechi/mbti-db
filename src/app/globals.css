@@ -70,78 +70,78 @@
   --explorers-950: oklch(0.279 0.077 44.78);
 
   /* Colors */
-  --background: var(--neutral-100);
-  --foreground: var(--neutral-600);
+  --light-tone: var(--neutral-100);
+  --dark-tone: var(--neutral-600);
   --effect-neumorphic-light: var(--color-white);
   --effect-neumorphic-dark: oklab(27.88% -0.01515 -0.08042 / 0.2);
 }
 
 .dark {
-  --background: var(--neutral-950);
-  --foreground: var(--neutral-200);
+  --light-tone: var(--neutral-950);
+  --dark-tone: var(--neutral-200);
   --effect-neumorphic-light: var(--neutral-900);
   --effect-neumorphic-dark: oklab(22.8% -0.00379 -0.00317);
 }
 
 .analysts {
-  --background: var(--analysts-200);
-  --foreground: var(--analysts-600);
+  --light-tone: var(--analysts-200);
+  --dark-tone: var(--analysts-600);
   --effect-neumorphic-light: var(--analysts-50);
   --effect-neumorphic-dark: var(--analysts-300);
 
   .dark & {
-    --background: var(--analysts-950);
-    --foreground: var(--analysts-200);
+    --light-tone: var(--analysts-950);
+    --dark-tone: var(--analysts-200);
     --effect-neumorphic-light: var(--analysts-900);
     --effect-neumorphic-dark: oklab(21.89597% 0.04231 -0.05579);
   }
 }
 
 .diplomats {
-  --background: var(--diplomats-100);
-  --foreground: var(--diplomats-500);
+  --light-tone: var(--diplomats-100);
+  --dark-tone: var(--diplomats-500);
   --effect-neumorphic-light: var(--diplomats-50);
   --effect-neumorphic-dark: var(--diplomats-200);
 
   .dark & {
-    --background: var(--diplomats-900);
-    --foreground: var(--diplomats-200);
+    --light-tone: var(--diplomats-900);
+    --dark-tone: var(--diplomats-200);
     --effect-neumorphic-light: var(--diplomats-700);
     --effect-neumorphic-dark: var(--diplomats-950);
   }
 }
 
 .sentinels {
-  --background: var(--sentinels-100);
-  --foreground: var(--sentinels-400);
+  --light-tone: var(--sentinels-100);
+  --dark-tone: var(--sentinels-400);
   --effect-neumorphic-light: var(--sentinels-50);
   --effect-neumorphic-dark: var(--sentinels-200);
 
   .dark & {
-    --background: var(--sentinels-950);
-    --foreground: var(--sentinels-200);
+    --light-tone: var(--sentinels-950);
+    --dark-tone: var(--sentinels-200);
     --effect-neumorphic-light: var(--sentinels-900);
     --effect-neumorphic-dark: oklab(22.871% -0.00548 -0.04548);
   }
 }
 
 .explorers {
-  --background: var(--explorers-100);
-  --foreground: var(--explorers-500);
+  --light-tone: var(--explorers-100);
+  --dark-tone: var(--explorers-500);
   --effect-neumorphic-light: var(--explorers-50);
   --effect-neumorphic-dark: var(--explorers-200);
 
   .dark & {
-    --background: var(--explorers-950);
-    --foreground: var(--explorers-100);
+    --light-tone: var(--explorers-950);
+    --dark-tone: var(--explorers-100);
     --effect-neumorphic-light: var(--explorers-900);
     --effect-neumorphic-dark: oklab(22.88% 0.03955 0.0446);
   }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-light-tone: var(--light-tone);
+  --color-dark-tone: var(--dark-tone);
 
   --shadow-elevation-neumorphic: 4px 4px 8px 0px var(--effect-neumorphic-dark),
     -4px -4px 6px 0px var(--effect-neumorphic-light);
@@ -161,6 +161,6 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-light-tone text-dark-tone antialiased;
   }
 }
