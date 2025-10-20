@@ -1,5 +1,6 @@
 import type { formats } from "~/i18n/request";
 import type { routing } from "~/i18n/routing";
+import type { CognitiveFunction } from "~/shared/enums/mbti/cognitive-functions";
 import type { Personality } from "~/shared/enums/mbti/personalities";
 import type {
   Energy,
@@ -31,7 +32,7 @@ type Attitude = {
   stack: Stack;
 };
 
-type CognitiveFunction = {
+type CognitiveFunctionInfo = {
   name: string;
   description: string;
   extraverted: Attitude;
@@ -76,13 +77,8 @@ declare module "next-intl" {
         CognitiveFunctions: {
           stack: Stack;
           percieving: string;
-          sensing: CognitiveFunction;
-          intuition: CognitiveFunction;
-
           judging: string;
-          thinking: CognitiveFunction;
-          feeling: CognitiveFunction;
-        };
+        } & Record<CognitiveFunction, CognitiveFunctionInfo>;
       };
     };
   }
