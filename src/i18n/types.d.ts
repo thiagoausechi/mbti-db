@@ -13,6 +13,11 @@ import type { Gender } from "~/shared/enums/profile/genders";
 import type { Pronoun } from "~/shared/enums/profile/pronouns";
 import type { Visibility } from "~/shared/enums/profile/visibilities";
 
+type Descriptive = {
+  title: string;
+  description: string;
+};
+
 type Stack = {
   dominant: string;
   auxiliary: string;
@@ -40,10 +45,7 @@ declare module "next-intl" {
     Locale: (typeof routing.locales)[number];
     Formats: typeof formats;
     Messages: {
-      Metadata: {
-        title: string;
-        description: string;
-      };
+      Metadata: Descriptive;
 
       HomePage: {
         title: string;
@@ -63,11 +65,11 @@ declare module "next-intl" {
           roles: Record<Role, string>;
           personalities: Record<Personality, DifferByPronoun>;
           preferences: {
-            energy: Record<Energy, DifferByPronoun>;
-            mind: Record<Mind, DifferByPronoun>;
-            nature: Record<Nature, DifferByPronoun>;
-            tactic: Record<Tactic, DifferByPronoun>;
-            identity: Record<Identity, DifferByPronoun>;
+            energy: Record<Energy, DifferByPronoun> & Descriptive;
+            mind: Record<Mind, DifferByPronoun> & Descriptive;
+            nature: Record<Nature, DifferByPronoun> & Descriptive;
+            tactic: Record<Tactic, DifferByPronoun> & Descriptive;
+            identity: Record<Identity, DifferByPronoun> & Descriptive;
           };
         };
 

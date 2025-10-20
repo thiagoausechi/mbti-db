@@ -31,26 +31,41 @@ const en: Messages = {
 
       preferences: {
         energy: {
+          title: "Energy Gain",
+          description:
+            "Extroverts gain energy from external activities and interacting with other people and the external world, while Introverts gain energy from more reserved and inwardly focused activities.",
           e: { he: "Extraverted", she: "Extraverted", they: "Extraverted" },
           i: { he: "Introverted", she: "Introverted", they: "Introverted" },
         },
 
         mind: {
+          title: "Information Gathering",
+          description:
+            "Sensors seek information primarily in concrete, historical, and realistic data about the world. Intuitives, on the other hand, prioritize imagination, interpretations, and the nuances between relationships.",
           s: { he: "Observant", she: "Observant", they: "Observant" },
           n: { he: "Intuitive", she: "Intuitive", they: "Intuitive" },
         },
 
         nature: {
+          title: "Decision Making",
+          description:
+            "Thinkers are logical and objective and have considerable regard for laws and facts. Feelers prioritize values and people over rules. They decide based on interpersonal harmony.",
           t: { he: "Thinking", she: "Thinking", they: "Thinking" },
           f: { he: "Feeling", she: "Feeling", they: "Feeling" },
         },
 
         tactic: {
+          title: "Lifestyle",
+          description:
+            "Judgers prefer a more organized and methodical lifestyle, while Perceivers are more flexible and adaptable to various situations.",
           j: { he: "Judging", she: "Judging", they: "Judging" },
           p: { he: "Prospecting", she: "Prospecting", they: "Prospecting" },
         },
 
         identity: {
+          title: "Identity",
+          description:
+            "Assertive individuals are self-confident, level-headed, and resistant to stress. They don't worry much, but this is different from apathy. Turbulent individuals are sensitive to stress, prone to worry, and perfectionistic. They are always seeking self-improvement.",
           a: { he: "Assertive", she: "Assertive", they: "Assertive" },
           t: { he: "Turbulent", she: "Turbulent", they: "Turbulent" },
         },
