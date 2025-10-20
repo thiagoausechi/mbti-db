@@ -1,3 +1,4 @@
+import type { LucideProps } from "lucide-react";
 import { BrainCircuit, Eye, Heart, Sparkles } from "lucide-react";
 import type { ComponentType } from "react";
 import { z } from "zod/mini";
@@ -14,7 +15,7 @@ export type CognitiveFunction = z.infer<typeof cognitiveFunctionsSchema>;
 
 export const cognitiveFunctionIconMap: Record<
   CognitiveFunction,
-  ComponentType
+  ComponentType<LucideProps>
 > = {
   sensing: Eye,
   intuition: Sparkles,
