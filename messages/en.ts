@@ -1,4 +1,4 @@
-import { Messages } from "next-intl";
+import type { Messages } from "next-intl";
 
 const en: Messages = {
   Metadata: {

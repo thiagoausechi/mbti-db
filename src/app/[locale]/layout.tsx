@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Locale, NextIntlClientProvider } from "next-intl";
+import type { Locale } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Open_Sans } from "next/font/google";
 import "../globals.css";
