@@ -6,7 +6,7 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="card"
       className={merge(
-        "bg-light-tone w-full text-dark-tone shadow-elevation-neumorphic rounded-surface flex flex-col gap-6 py-surface ",
+        "bg-light-tone w-full text-dark-tone shadow-elevation-neumorphic rounded-surface flex flex-col gap-layout py-surface ",
         className
       )}
       {...props}
