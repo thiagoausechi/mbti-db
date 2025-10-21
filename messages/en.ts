@@ -101,7 +101,7 @@ const en: Messages = {
 
       percieving: "Perceiving Functions",
       sensing: {
-        title: "Sensing (S - Sensing)",
+        title: "Sensing (S)",
         description:
           "Sensing is a perceiving function that gathers information through the five senses and direct experience. It focuses on the concrete, the factual, and what is real and present in the here and now, or what has been experienced in the past.",
         extraverted: {
@@ -136,7 +136,7 @@ const en: Messages = {
         },
       },
       intuition: {
-        title: "Intuition (N - Intuition)",
+        title: "Intuition (N)",
         description:
           'Intuition is a perceiving function that processes information through patterns, connections, and abstract possibilities. It focuses on the "big picture," what could be, and future implications, rather than concrete details.',
         extraverted: {
@@ -173,7 +173,7 @@ const en: Messages = {
 
       judging: "Judging Functions",
       thinking: {
-        title: "Thinking (T - Thinking)",
+        title: "Thinking (T)",
         description:
           "Thinking is a judging function. It seeks to make decisions based on logic, objective criteria, and impersonal analysis. The focus is on analyzing cause and effect, finding flaws, and building systems and models that work consistently and efficiently.",
         extraverted: {
@@ -208,7 +208,7 @@ const en: Messages = {
         },
       },
       feeling: {
-        title: "Feeling (F - Feeling)",
+        title: "Feeling (F)",
         description:
           "Feeling is a judging function that makes decisions based on values, social harmony, and the impact of actions on people. It prioritizes morals, ethics, and feelings (one's own and others') to determine what is right or wrong.",
         extraverted: {
