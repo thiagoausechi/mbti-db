@@ -1,6 +1,9 @@
 import type { formats } from "~/i18n/request";
 import type { routing } from "~/i18n/routing";
-import type { CognitiveFunction } from "~/shared/enums/mbti/cognitive-functions";
+import type {
+  Attitude,
+  CognitiveFunction,
+} from "~/shared/enums/mbti/cognitive-functions";
 import type { Personality } from "~/shared/enums/mbti/personalities";
 import type {
   Energy,
@@ -26,18 +29,8 @@ type Stack = {
   inferior: string;
 };
 
-type Attitude = {
-  name: string;
-  description: string;
-  stack: Stack;
-};
-
-type CognitiveFunctionInfo = {
-  name: string;
-  description: string;
-  extraverted: Attitude;
-  introverted: Attitude;
-};
+type CognitiveFunctionInfo = Descriptive &
+  Record<Attitude, Descriptive & { stack: Stack }>;
 
 type DifferByPronoun = Record<Pronoun, string>;
 
