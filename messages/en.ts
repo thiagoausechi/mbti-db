@@ -101,11 +101,11 @@ const en: Messages = {
 
       percieving: "Perceiving Functions",
       sensing: {
-        name: "Sensing (S - Sensing)",
+        title: "Sensing (S - Sensing)",
         description:
           "Sensing is a perceiving function that gathers information through the five senses and direct experience. It focuses on the concrete, the factual, and what is real and present in the here and now, or what has been experienced in the past.",
         extraverted: {
-          name: "Extraverted Sensing (Se)",
+          title: "Extraverted Sensing (Se)",
           description:
             "Focuses on experiencing the external world in real-time through the five senses. It is highly attuned to the present environment, seeking stimuli, action, and immediate opportunities.",
           stack: {
@@ -120,7 +120,7 @@ const en: Messages = {
           },
         },
         introverted: {
-          name: "Introverted Sensing (Si)",
+          title: "Introverted Sensing (Si)",
           description:
             "Focuses on internal sensory impressions and past experiences. It compares the present with the past to create a stable, reliable, and detailed map of the world.",
           stack: {
@@ -136,11 +136,11 @@ const en: Messages = {
         },
       },
       intuition: {
-        name: "Intuition (N - Intuition)",
+        title: "Intuition (N - Intuition)",
         description:
           'Intuition is a perceiving function that processes information through patterns, connections, and abstract possibilities. It focuses on the "big picture," what could be, and future implications, rather than concrete details.',
         extraverted: {
-          name: "Extraverted Intuition (Ne)",
+          title: "Extraverted Intuition (Ne)",
           description:
             'Sees possibilities and connections in the external world. It generates multiple ideas, brainstorms, and explores different paths and potentials. It is the "what if?" function.',
           stack: {
@@ -155,7 +155,7 @@ const en: Messages = {
           },
         },
         introverted: {
-          name: "Introverted Intuition (Ni)",
+          title: "Introverted Intuition (Ni)",
           description:
             "Synthesizes information unconsciously to form a vision or insight about how things will work out in the future. It focuses on a single path or a deep, singular understanding.",
           stack: {
@@ -173,11 +173,11 @@ const en: Messages = {
 
       judging: "Judging Functions",
       thinking: {
-        name: "Thinking (T - Thinking)",
+        title: "Thinking (T - Thinking)",
         description:
           "Thinking is a judging function. It seeks to make decisions based on logic, objective criteria, and impersonal analysis. The focus is on analyzing cause and effect, finding flaws, and building systems and models that work consistently and efficiently.",
         extraverted: {
-          name: "Extraverted Thinking (Te)",
+          title: "Extraverted Thinking (Te)",
           description:
             "Organizes and structures the external environment to achieve efficiency and productivity. It focuses on facts, data, and applying logic to create order and achieve goals.",
           stack: {
@@ -192,7 +192,7 @@ const en: Messages = {
           },
         },
         introverted: {
-          name: "Introverted Thinking (Ti)",
+          title: "Introverted Thinking (Ti)",
           description:
             "Seeks precision and internal consistency of ideas and mental models. It disassembles concepts to understand their fundamental principles. Truth and logical clarity are paramount.",
           stack: {
@@ -208,11 +208,11 @@ const en: Messages = {
         },
       },
       feeling: {
-        name: "Feeling (F - Feeling)",
+        title: "Feeling (F - Feeling)",
         description:
           "Feeling is a judging function that makes decisions based on values, social harmony, and the impact of actions on people. It prioritizes morals, ethics, and feelings (one's own and others') to determine what is right or wrong.",
         extraverted: {
-          name: "Extraverted Feeling (Fe)",
+          title: "Extraverted Feeling (Fe)",
           description:
             "Seeks harmony in the external environment. It connects with others, understands social norms and others' feelings, and acts to maintain a positive and cooperative atmosphere.",
           stack: {
@@ -227,7 +227,7 @@ const en: Messages = {
           },
         },
         introverted: {
-          name: "Introverted Feeling (Fi)",
+          title: "Introverted Feeling (Fi)",
           description:
             "Seeks consistency with an internal, personal value system. It focuses on authenticity, individual morality, and understanding one's own emotions in depth.",
           stack: {
