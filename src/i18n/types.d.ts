@@ -13,6 +13,7 @@ import type {
   Tactic,
 } from "~/shared/enums/mbti/preferences";
 import type { Role } from "~/shared/enums/mbti/roles";
+import type { StackType } from "~/shared/enums/mbti/stack";
 import type { Gender } from "~/shared/enums/profile/genders";
 import type { Pronoun } from "~/shared/enums/profile/pronouns";
 import type { Visibility } from "~/shared/enums/profile/visibilities";
@@ -22,12 +23,7 @@ type Descriptive = {
   description: string;
 };
 
-type Stack = {
-  dominant: string;
-  auxiliary: string;
-  tertiary: string;
-  inferior: string;
-};
+type Stack = Record<StackType, string>;
 
 type CognitiveFunctionInfo = Descriptive &
   Record<Attitude, Descriptive & { stack: Stack }>;
