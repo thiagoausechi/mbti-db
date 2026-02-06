@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { z } from "zod/mini";
 
-import type { EnergyMeaning } from "../preferences/energy";
+import type { Energy, EnergyMeaning } from "../preferences/energy";
 import { Intuition, Sensing } from "../preferences/mind";
 import { Feeling, Thinking } from "../preferences/nature";
 
@@ -28,6 +28,11 @@ export const cognitiveFunctions = [
 
 export const cognitiveFunctionsSchema = z.enum(cognitiveFunctions);
 export type CognitiveFunction = z.infer<typeof cognitiveFunctionsSchema>;
+
+export type OrientedCognitiveFunction = {
+  function: CognitiveFunction;
+  attitude: Energy;
+};
 
 type IconInfo = Record<"default" | EnergyMeaning, LucideIcon>;
 export const cognitiveFunctionIconMap: Record<CognitiveFunction, IconInfo> = {
