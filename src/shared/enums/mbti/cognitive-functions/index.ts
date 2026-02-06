@@ -1,4 +1,4 @@
-import type { LucideProps } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import {
   Archive,
   Bike,
@@ -13,44 +13,45 @@ import {
   Telescope,
   Users,
 } from "lucide-react";
-import type { ComponentType } from "react";
 import { z } from "zod/mini";
 
+import type { EnergyMeaning } from "../preferences/energy";
+import { Intuition, Sensing } from "../preferences/mind";
+import { Feeling, Thinking } from "../preferences/nature";
+
 export const cognitiveFunctions = [
-  "sensing",
-  "intuition",
-  "thinking",
-  "feeling",
+  Sensing,
+  Intuition,
+  Thinking,
+  Feeling,
 ] as const;
-export const attitudes = ["extraverted", "introverted"] as const;
 
 export const cognitiveFunctionsSchema = z.enum(cognitiveFunctions);
-export const attitudesSchema = z.enum(attitudes);
-
 export type CognitiveFunction = z.infer<typeof cognitiveFunctionsSchema>;
-export type Attitude = z.infer<typeof attitudesSchema>;
 
-type IconInfo = Record<"default" | Attitude, ComponentType<LucideProps>>;
-
+type IconInfo = Record<"default" | EnergyMeaning, LucideIcon>;
 export const cognitiveFunctionIconMap: Record<CognitiveFunction, IconInfo> = {
-  sensing: {
+  [Sensing]: {
     default: Eye,
     extraverted: Bike,
     introverted: Archive,
   },
-  intuition: {
+  [Intuition]: {
     default: Sparkles,
     extraverted: Network,
     introverted: Telescope,
   },
-  thinking: {
+  [Thinking]: {
     default: BrainCircuit,
     extraverted: SquareChartGantt,
     introverted: Puzzle,
   },
-  feeling: {
+  [Feeling]: {
     default: Heart,
     extraverted: Users,
     introverted: Gem,
   },
 };
+
+export * from "./judging";
+export * from "./perceiving";

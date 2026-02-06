@@ -1,48 +1,31 @@
 import { z } from "zod/mini";
-import type { Energy, Mind, Nature, Tactic } from "./preferences";
-import type { Role } from "./roles";
+import { EnergyPreferences, type Energy } from "./preferences/energy";
+import { IdentityPreferences, type Identity } from "./preferences/identity";
+import { MindPreferences, type Mind } from "./preferences/mind";
+import { NaturePreferences, type Nature } from "./preferences/nature";
+import { TacticsPreferences, type Tactic } from "./preferences/tactics";
 
-export type Personality = `${Energy}${Mind}${Nature}${Tactic}`;
+export type PersonalityWithoutIdentity = `${Energy}${Mind}${Nature}${Tactic}`;
+export const PERSONALITIES_ACRONYMS_WITHOUT_IDENTITY = [
+  ...EnergyPreferences.flatMap((e) =>
+    MindPreferences.flatMap((m) =>
+      NaturePreferences.flatMap((n) =>
+        TacticsPreferences.map((t) => `${e}${m}${n}${t}` as const),
+      ),
+    ),
+  ),
+] as const satisfies readonly PersonalityWithoutIdentity[];
 
-// prettier-ignore
-export const personalitiesAcronyms = [
-    "intj", "intp", "entj", "entp", // Analysts
-    "infj", "infp", "enfj", "enfp", // Diplomats
-    "istj", "isfj", "estj", "esfj", // Sentinels
-    "istp", "isfp", "estp", "esfp", // Explorers
-] satisfies Personality[];
+export type PersonalityWithIdentity =
+  `${Energy}${Mind}${Nature}${Tactic}${Identity}`;
+export const PERSONALITIES_ACRONYMS_WITH_IDENTITY = [
+  ...PERSONALITIES_ACRONYMS_WITHOUT_IDENTITY.flatMap((personality) =>
+    IdentityPreferences.map((identity) => `${personality}${identity}` as const),
+  ),
+] as const satisfies readonly PersonalityWithIdentity[];
 
-export const personalitySchema = z.enum(personalitiesAcronyms);
-
-export const personalityRoleMap: Record<Personality, Role> = {
-  intj: "analysts",
-  intp: "analysts",
-  entj: "analysts",
-  entp: "analysts",
-  infj: "diplomats",
-  infp: "diplomats",
-  enfj: "diplomats",
-  enfp: "diplomats",
-  istj: "sentinels",
-  isfj: "sentinels",
-  estj: "sentinels",
-  esfj: "sentinels",
-  istp: "explorers",
-  isfp: "explorers",
-  estp: "explorers",
-  esfp: "explorers",
-} as const;
-
-export function getPersonalityByPreferences({
-  energy,
-  mind,
-  nature,
-  tactic,
-}: {
-  energy: Energy;
-  mind: Mind;
-  nature: Nature;
-  tactic: Tactic;
-}): Personality {
-  return `${energy}${mind}${nature}${tactic}`;
-}
+export const personalitiesAcronymsSchema = z.union([
+  z.enum(PERSONALITIES_ACRONYMS_WITHOUT_IDENTITY),
+  z.enum(PERSONALITIES_ACRONYMS_WITH_IDENTITY),
+]);
+export type Personality = z.infer<typeof personalitiesAcronymsSchema>;

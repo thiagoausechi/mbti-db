@@ -66,8 +66,8 @@ const en: Messages = {
           title: "Identity",
           description:
             "Assertive individuals are self-confident, level-headed, and resistant to stress. They don't worry much, but this is different from apathy. Turbulent individuals are sensitive to stress, prone to worry, and perfectionistic. They are always seeking self-improvement.",
-          a: { he: "Assertive", she: "Assertive", they: "Assertive" },
-          t: { he: "Turbulent", she: "Turbulent", they: "Turbulent" },
+          "-a": { he: "Assertive", she: "Assertive", they: "Assertive" },
+          "-t": { he: "Turbulent", she: "Turbulent", they: "Turbulent" },
         },
       },
 
