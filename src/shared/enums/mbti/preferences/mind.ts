@@ -13,6 +13,11 @@ export const mindMeaningSchema = z.enum(MindMeaning);
 export type Mind = z.infer<typeof mindSchema>;
 export type MindMeaning = z.infer<typeof mindMeaningSchema>;
 
+export const oppositeMindMap = {
+  [IntuitiveMind]: SensingMind,
+  [SensingMind]: IntuitiveMind,
+} as const;
+
 export const mindToMeaningMap = {
   [IntuitiveMind]: Intuition,
   [SensingMind]: Sensing,

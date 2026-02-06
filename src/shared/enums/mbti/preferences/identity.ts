@@ -16,6 +16,11 @@ export const identityMeaningSchema = z.enum(IdentitiesMeaning);
 export type Identity = z.infer<typeof identitySchema>;
 export type IdentityMeaning = z.infer<typeof identityMeaningSchema>;
 
+export const oppositeIdentityMap = {
+  [AssertiveIdentity]: TurbulentIdentity,
+  [TurbulentIdentity]: AssertiveIdentity,
+} as const;
+
 export const identityToMeaningMap = {
   [AssertiveIdentity]: Assertive,
   [TurbulentIdentity]: Turbulent,

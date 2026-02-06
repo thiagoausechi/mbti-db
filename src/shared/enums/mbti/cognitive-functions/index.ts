@@ -51,7 +51,14 @@ export const cognitiveFunctionIconMap: Record<CognitiveFunction, IconInfo> = {
     extraverted: Users,
     introverted: Gem,
   },
-};
+} as const;
+
+export const oppositeCognitiveFunctionMeaning = {
+  [Sensing]: Intuition,
+  [Intuition]: Sensing,
+  [Thinking]: Feeling,
+  [Feeling]: Thinking,
+} as const;
 
 export * from "./judging";
 export * from "./perceiving";

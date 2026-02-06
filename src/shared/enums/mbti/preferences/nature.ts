@@ -13,6 +13,11 @@ export const natureMeaningSchema = z.enum(NatureMeaning);
 export type Nature = z.infer<typeof natureSchema>;
 export type NatureMeaning = z.infer<typeof natureMeaningSchema>;
 
+export const oppositeNatureMap = {
+  [ThinkingNature]: FeelingNature,
+  [FeelingNature]: ThinkingNature,
+} as const;
+
 export const natureToMeaningMap = {
   [ThinkingNature]: Thinking,
   [FeelingNature]: Feeling,

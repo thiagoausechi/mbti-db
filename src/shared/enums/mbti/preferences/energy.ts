@@ -16,6 +16,11 @@ export const energyMeaningSchema = z.enum(EnergiesMeaning);
 export type Energy = z.infer<typeof energySchema>;
 export type EnergyMeaning = z.infer<typeof energyMeaningSchema>;
 
+export const oppositeEnergyMap = {
+  [ExtraversionEnergy]: IntroversionEnergy,
+  [IntroversionEnergy]: ExtraversionEnergy,
+} as const;
+
 export const energyToMeaningMap = {
   [ExtraversionEnergy]: Extraverted,
   [IntroversionEnergy]: Introverted,

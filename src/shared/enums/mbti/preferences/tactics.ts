@@ -13,6 +13,11 @@ export const tacticMeaningSchema = z.enum(TacticsMeaning);
 export type Tactic = z.infer<typeof tacticSchema>;
 export type TacticMeaning = z.infer<typeof tacticMeaningSchema>;
 
+export const oppositeTacticMap = {
+  [JudgingTactic]: PerceivingTactic,
+  [PerceivingTactic]: JudgingTactic,
+} as const;
+
 export const tacticToMeaningMap = {
   [JudgingTactic]: Judging,
   [PerceivingTactic]: Perceiving,
