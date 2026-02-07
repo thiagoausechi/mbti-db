@@ -7,9 +7,15 @@ const en: Messages = {
       "A database for MBTI types, cognitive functions, and related information.",
   },
 
-  HomePage: {
-    title: "Welcome to mbti-db!",
-    subtitle: "This is still a work in progress.",
+  Pages: {
+    home: {
+      metadata: {
+        slug: "home",
+        navigation: "Home",
+      },
+      title: "Welcome to mbti-db!",
+      subtitle: "This is still a work in progress.",
+    },
   },
 
   Profile: {

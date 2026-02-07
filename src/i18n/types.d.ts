@@ -28,6 +28,10 @@ type CognitiveFunctionInfo = Descriptive &
 
 type PronounSensitive<T = string> = Record<Pronoun, T>;
 
+type Page<T> = {
+  metadata: { slug: string; navigation: string };
+} & T;
+
 declare module "next-intl" {
   interface AppConfig {
     Locale: (typeof routing.locales)[number];
@@ -35,9 +39,11 @@ declare module "next-intl" {
     Messages: {
       Metadata: Descriptive;
 
-      HomePage: {
-        title: string;
-        subtitle: string;
+      Pages: {
+        home: Page<{
+          title: string;
+          subtitle: string;
+        }>;
       };
 
       Profile: {

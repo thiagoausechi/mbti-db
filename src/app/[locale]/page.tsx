@@ -6,8 +6,8 @@ import {
   CardTitle,
 } from "~/client/components/ui/card";
 
-export default function Home() {
-  const t = useTranslations("HomePage");
+export default function HomePage() {
+  const t = useTranslations("Pages.home");
 
   return (
     <main className="container mx-auto p-4 min-h-screen flex flex-col items-center justify-center space-y-surface">
