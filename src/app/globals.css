@@ -165,6 +165,7 @@
   --color-light-tone-muted: var(--light-tone-muted);
   --color-dark-tone: var(--dark-tone);
   --color-border: var(--border);
+  --color-destructive: var(--color-red-400);
 
   --shadow-elevation-neumorphic: 4px 4px 8px 0px var(--effect-neumorphic-dark),
     -4px -4px 6px 0px var(--effect-neumorphic-light);
