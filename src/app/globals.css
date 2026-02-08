@@ -167,13 +167,17 @@
   --color-border: var(--border);
   --color-destructive: var(--color-red-400);
 
-  --shadow-elevation-neumorphic: 4px 4px 8px 0px var(--effect-neumorphic-dark),
+  --shadow-elevation-neumorphic:
+    4px 4px 8px 0px var(--effect-neumorphic-dark),
     -4px -4px 6px 0px var(--effect-neumorphic-light);
-  --shadow-depth-neumorphic: inset 4px 4px 8px 0px var(--effect-neumorphic-dark),
+  --shadow-depth-neumorphic:
+    inset 4px 4px 8px 0px var(--effect-neumorphic-dark),
     inset -4px -4px 6px 0px var(--effect-neumorphic-light);
-  --drop-shadow-neumorphic: 1px 1px 3px var(--effect-neumorphic-dark),
+  --drop-shadow-neumorphic:
+    1px 1px 3px var(--effect-neumorphic-dark),
     -2px -2px 2px var(--effect-neumorphic-light);
-  --text-shadow-neumorphic: 1px 1px 3px var(--effect-neumorphic-dark),
+  --text-shadow-neumorphic:
+    1px 1px 3px var(--effect-neumorphic-dark),
     -2px -2px 2px var(--effect-neumorphic-light);
 
   --spacing-layout: calc(var(--spacing) * 4);
