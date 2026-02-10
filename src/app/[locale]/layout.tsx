@@ -3,6 +3,7 @@ import type { Locale } from "next-intl";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Open_Sans } from "next/font/google";
+import { AppFooter } from "~/client/components/layout/footer";
 import { Navbar } from "~/client/components/layout/navbar";
 import { SidebarProvider } from "~/client/components/ui/sidebar";
 import { TooltipProvider } from "~/client/components/ui/tooltip";
@@ -58,7 +59,10 @@ export default function RootLayout({ children }: LayoutProps<"/[locale]">) {
           <TooltipProvider>
             <SidebarProvider>
               <Navbar />
-              {children}
+              <div className="w-full min-h-screen">
+                {children}
+                <AppFooter />
+              </div>
             </SidebarProvider>
           </TooltipProvider>
         </NextIntlClientProvider>
