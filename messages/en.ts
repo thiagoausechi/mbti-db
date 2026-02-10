@@ -5,6 +5,10 @@ const en: Messages = {
     title: "mbti-db",
     description:
       "A database for MBTI types, cognitive functions, and related information.",
+    author: {
+      title: "Developed by",
+      description: "Thiago Ausechi",
+    },
   },
 
   Actions: {

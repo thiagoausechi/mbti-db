@@ -26,10 +26,13 @@ export async function generateMetadata(
   return {
     title: t("title"),
     description: t("description"),
-    applicationName: "mbti-db",
-    creator: "Thiago Ausechi",
+    applicationName: t("title"),
+    creator: t("author.description"),
     authors: [
-      { name: "Thiago Ausechi", url: "https://github.com/thiagoausechi" },
+      {
+        name: t("author.description"),
+        url: "https://github.com/thiagoausechi",
+      },
     ],
     keywords: [
       "mbti",

@@ -37,7 +37,9 @@ declare module "next-intl" {
     Locale: (typeof routing.locales)[number];
     Formats: typeof formats;
     Messages: {
-      Metadata: Descriptive;
+      Metadata: Descriptive & {
+        author: Descriptive;
+      };
 
       Actions: {
         sidebar: {
