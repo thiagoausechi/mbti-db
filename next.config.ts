@@ -9,9 +9,8 @@ const nextConfig: NextConfig = {
 
   /**
    * Build performance optimizations.
-   * Type checking and linting are handled in CI/CD pipelines.
+   * Type checking are handled in CI/CD pipelines.
    */
-  eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
 };
 
