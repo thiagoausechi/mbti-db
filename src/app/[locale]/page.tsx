@@ -5,18 +5,21 @@ import {
   CardHeader,
   CardTitle,
 } from "~/client/components/ui/card";
+import { HalfColumnContent, Main } from "~/client/components/ui/content";
 
 export default function HomePage() {
   const t = useTranslations("Pages.home");
 
   return (
-    <main className="container mx-auto p-4 min-h-screen flex flex-col items-center justify-center space-y-surface">
-      <Card className="max-w-md">
-        <CardHeader className="text-center">
-          <CardTitle>{t("title")}</CardTitle>
-          <CardDescription>{t("subtitle")}</CardDescription>
-        </CardHeader>
-      </Card>
-    </main>
+    <Main>
+      <HalfColumnContent className="my-auto" centered>
+        <Card>
+          <CardHeader className="text-center">
+            <CardTitle>{t("title")}</CardTitle>
+            <CardDescription>{t("subtitle")}</CardDescription>
+          </CardHeader>
+        </Card>
+      </HalfColumnContent>
+    </Main>
   );
 }
