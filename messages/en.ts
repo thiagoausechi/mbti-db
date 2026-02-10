@@ -7,6 +7,13 @@ const en: Messages = {
       "A database for MBTI types, cognitive functions, and related information.",
   },
 
+  Actions: {
+    sidebar: {
+      open: "Open sidebar",
+      close: "Close sidebar",
+    },
+  },
+
   Pages: {
     home: {
       metadata: {

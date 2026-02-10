@@ -39,6 +39,13 @@ declare module "next-intl" {
     Messages: {
       Metadata: Descriptive;
 
+      Actions: {
+        sidebar: {
+          open: string;
+          close: string;
+        };
+      };
+
       Pages: {
         home: Page<{
           title: string;
