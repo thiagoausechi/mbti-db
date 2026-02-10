@@ -39,7 +39,7 @@ function HalfColumnContent({
       data-slot="half-column-content"
       data-centered={centered}
       className={merge(
-        "col-span-4 lg:col-span-6 data-[centered=true]:lg:col-start-4",
+        "col-span-4 lg:col-span-6 data-[centered=true]:md:col-start-3 data-[centered=true]:lg:col-start-4",
         className,
       )}
       {...props}
