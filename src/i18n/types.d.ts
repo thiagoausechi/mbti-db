@@ -38,6 +38,7 @@ declare module "next-intl" {
     Formats: typeof formats;
     Messages: {
       Metadata: Descriptive & {
+        disclaimer: Descriptive;
         author: Descriptive;
       };
 

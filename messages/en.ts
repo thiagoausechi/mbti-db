@@ -5,6 +5,11 @@ const en: Messages = {
     title: "mbti-db",
     description:
       "A database for MBTI types, cognitive functions, and related information.",
+    disclaimer: {
+      title: "Disclaimer",
+      description:
+        "MBTI and Myers-Briggs Type Indicator are registered trademarks of The Myers-Briggs Company in the United States and other countries. This project is an independent database and is not affiliated with, authorized, maintained, sponsored, or endorsed by The Myers-Briggs Company.",
+    },
     author: {
       title: "Developed by",
       description: "Thiago Ausechi",
