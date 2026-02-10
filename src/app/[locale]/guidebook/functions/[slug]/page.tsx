@@ -2,11 +2,14 @@ import { notFound } from "next/navigation";
 import { FullColumnContent } from "~/client/components/ui/content";
 import { EnergyCard } from "~/features/guidebook/cognitive-functions/components/energy-card";
 import { SummaryCard } from "~/features/guidebook/cognitive-functions/components/summary-card";
+import { routing } from "~/i18n/routing";
 import type { CognitiveFunction } from "~/shared/enums/mbti/cognitive-functions";
 import { cognitiveFunctions } from "~/shared/enums/mbti/cognitive-functions";
 
 export async function generateStaticParams() {
-  return cognitiveFunctions.map((slug) => ({ slug }));
+  return routing.locales.flatMap((locale) =>
+    cognitiveFunctions.map((slug) => ({ locale, slug })),
+  );
 }
 
 export default async function GuidebookFunctionPage({
