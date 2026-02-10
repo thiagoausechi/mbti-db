@@ -3,6 +3,8 @@ import type { Locale } from "next-intl";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Open_Sans } from "next/font/google";
+import { Navbar } from "~/client/components/layout/navbar";
+import { SidebarProvider } from "~/client/components/ui/sidebar";
 import { TooltipProvider } from "~/client/components/ui/tooltip";
 import "../globals.css";
 
@@ -50,7 +52,12 @@ export default function RootLayout({ children }: LayoutProps<"/[locale]">) {
     <html>
       <body className={`${openSans.variable}`}>
         <NextIntlClientProvider>
-          <TooltipProvider>{children}</TooltipProvider>
+          <TooltipProvider>
+            <SidebarProvider>
+              <Navbar />
+              {children}
+            </SidebarProvider>
+          </TooltipProvider>
         </NextIntlClientProvider>
       </body>
     </html>
