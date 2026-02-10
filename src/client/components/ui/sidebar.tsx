@@ -389,7 +389,7 @@ function SidebarMenuButton({
       { className: merge("w-full", className) },
       props,
     ),
-    render: !tooltip ? render : TooltipTrigger,
+    render: !tooltip ? render : <TooltipTrigger render={render} />,
     state: {
       slot: "sidebar-menu-button",
       sidebar: "menu-button",
