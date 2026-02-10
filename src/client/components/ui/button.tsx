@@ -33,18 +33,23 @@ function Button({
   className,
   variant,
   size,
+  full = false,
   asChild = false,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
+    full?: boolean;
   }) {
   const Comp = asChild ? Slot : "button";
 
   return (
     <Comp
       data-slot="button"
-      className={merge(buttonVariants({ variant, size, className }))}
+      className={merge(
+        buttonVariants({ variant, size, className }),
+        full && "w-full",
+      )}
       {...props}
     />
   );
