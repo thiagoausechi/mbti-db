@@ -240,7 +240,7 @@ function SidebarHeader({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="sidebar-header"
       data-sidebar="header"
-      className={merge("gap-2 p-2 flex flex-col", className)}
+      className={merge("gap-2 pt-surface px-surface flex flex-col", className)}
       {...props}
     />
   );
@@ -251,7 +251,7 @@ function SidebarFooter({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="sidebar-footer"
       data-sidebar="footer"
-      className={merge("gap-2 p-2 flex flex-col", className)}
+      className={merge("gap-2 pb-surface px-surface flex flex-col", className)}
       {...props}
     />
   );
