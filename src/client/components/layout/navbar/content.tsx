@@ -8,14 +8,14 @@ import {
 import { LinkEntry } from "./entries";
 
 export function NavbarContent() {
-  const t = useTranslations("Pages");
+  const t = useTranslations();
 
   return (
     <SidebarContent>
       <SidebarGroup>
         <SidebarMenu>
           <LinkEntry
-            label={t("home.metadata.navigation")}
+            label={t("Pages.home.metadata.navigation")}
             icon={Home}
             href="/"
           />
