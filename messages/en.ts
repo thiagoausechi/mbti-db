@@ -23,6 +23,13 @@ const en: Messages = {
       title: "Welcome to mbti-db!",
       subtitle: "This is still a work in progress.",
     },
+
+    guidebook: {
+      metadata: {
+        slug: "guidebook",
+        navigation: "Guidebook",
+      },
+    },
   },
 
   Profile: {
