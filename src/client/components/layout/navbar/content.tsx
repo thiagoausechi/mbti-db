@@ -1,11 +1,12 @@
-import { Home } from "lucide-react";
+import { BookMarked, Home } from "lucide-react";
 import { useTranslations } from "next-intl";
 import {
   SidebarContent,
   SidebarGroup,
   SidebarMenu,
 } from "~/client/components/ui/sidebar";
-import { LinkEntry } from "./entries";
+import { cognitiveFunctionIconMap } from "~/shared/enums/mbti/cognitive-functions";
+import { CategoryEntry, CollapsibleEntry, LinkEntry } from "./entries";
 
 export function NavbarContent() {
   const t = useTranslations();
@@ -19,6 +20,40 @@ export function NavbarContent() {
             icon={Home}
             href="/"
           />
+
+          <CollapsibleEntry
+            label={t("Pages.guidebook.metadata.navigation")}
+            icon={BookMarked}
+          >
+            <CategoryEntry label={t("Theory.CognitiveFunctions.percieving")}>
+              <LinkEntry
+                label={t("Theory.CognitiveFunctions.sensing.title")}
+                icon={cognitiveFunctionIconMap["sensing"].default}
+                href="/guidebook/functions/sensing"
+                asSubitem
+              />
+              <LinkEntry
+                label={t("Theory.CognitiveFunctions.intuition.title")}
+                icon={cognitiveFunctionIconMap["intuition"].default}
+                href="/guidebook/functions/intuition"
+                asSubitem
+              />
+            </CategoryEntry>
+            <CategoryEntry label={t("Theory.CognitiveFunctions.judging")}>
+              <LinkEntry
+                label={t("Theory.CognitiveFunctions.thinking.title")}
+                icon={cognitiveFunctionIconMap["thinking"].default}
+                href="/guidebook/functions/thinking"
+                asSubitem
+              />
+              <LinkEntry
+                label={t("Theory.CognitiveFunctions.feeling.title")}
+                icon={cognitiveFunctionIconMap["feeling"].default}
+                href="/guidebook/functions/feeling"
+                asSubitem
+              />
+            </CategoryEntry>
+          </CollapsibleEntry>
         </SidebarMenu>
       </SidebarGroup>
     </SidebarContent>
