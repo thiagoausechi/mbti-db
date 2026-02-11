@@ -91,7 +91,7 @@
 .analysts {
   --light-tone: var(--analysts-200);
   --dark-tone: var(--analysts-600);
-  --border: var(--analysts-400);
+  --border: var(--analysts-300);
 
   --effect-neumorphic-light: var(--analysts-50);
   --effect-neumorphic-dark: var(--analysts-300);
@@ -109,7 +109,7 @@
 .diplomats {
   --light-tone: var(--diplomats-100);
   --dark-tone: var(--diplomats-500);
-  --border: var(--diplomats-400);
+  --border: var(--diplomats-300);
 
   --effect-neumorphic-light: var(--diplomats-50);
   --effect-neumorphic-dark: var(--diplomats-200);
@@ -127,7 +127,7 @@
 .sentinels {
   --light-tone: var(--sentinels-100);
   --dark-tone: var(--sentinels-400);
-  --border: var(--sentinels-400);
+  --border: var(--sentinels-300);
 
   --effect-neumorphic-light: var(--sentinels-50);
   --effect-neumorphic-dark: var(--sentinels-200);
@@ -145,7 +145,7 @@
 .explorers {
   --light-tone: var(--explorers-100);
   --dark-tone: var(--explorers-500);
-  --border: var(--explorers-400);
+  --border: var(--explorers-300);
 
   --effect-neumorphic-light: var(--explorers-50);
   --effect-neumorphic-dark: var(--explorers-200);
