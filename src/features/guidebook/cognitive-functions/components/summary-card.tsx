@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from "~/client/components/ui/card";
 import {
-  CognitiveFunction,
+  type CognitiveFunction,
   cognitiveFunctionIconMap,
 } from "~/shared/enums/mbti/cognitive-functions";
 

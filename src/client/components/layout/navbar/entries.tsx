@@ -1,5 +1,5 @@
-import { ChevronRight, LucideIcon } from "lucide-react";
-import { PropsWithChildren } from "react";
+import { ChevronRight, type LucideIcon } from "lucide-react";
+import type { PropsWithChildren } from "react";
 import { Button } from "~/client/components/ui/button";
 import {
   Collapsible,
