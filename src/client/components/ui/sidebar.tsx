@@ -184,13 +184,13 @@ function Sidebar({
       <div
         data-slot="sidebar-gap"
         className={merge(
-          "transition-[width] duration-200 ease-linear relative min-w-fit group-data-[collapsible=icon]:w-28 w-(--sidebar-width) bg-transparent",
+          "transition-[width] duration-200 ease-linear relative min-w-fit group-data-[collapsible=icon]:w-[104px] w-(--sidebar-width) bg-transparent",
         )}
       />
       <div
         data-slot="sidebar-container"
         className={merge(
-          "fixed inset-y-0 z-10 hidden h-svh min-w-fit group-data-[collapsible=icon]:w-28 w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear left-0 md:flex",
+          "fixed inset-y-0 z-10 hidden h-svh min-w-fit group-data-[collapsible=icon]:w-[104px] w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear left-0 md:flex",
           className,
         )}
         {...props}
@@ -238,7 +238,10 @@ function SidebarHeader({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="sidebar-header"
       data-sidebar="header"
-      className={merge("gap-2 pt-surface px-surface flex flex-col", className)}
+      className={merge(
+        "gap-2 pt-surface px-surface flex flex-col group-data-[collapsible=icon]:w-0 group-data-[collapsible=icon]:min-w-fit",
+        className,
+      )}
       {...props}
     />
   );
@@ -249,7 +252,10 @@ function SidebarFooter({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="sidebar-footer"
       data-sidebar="footer"
-      className={merge("gap-2 pb-surface px-surface flex flex-col", className)}
+      className={merge(
+        "gap-2 pb-surface px-surface flex flex-col group-data-[collapsible=icon]:w-0 group-data-[collapsible=icon]:min-w-fit",
+        className,
+      )}
       {...props}
     />
   );
