@@ -8,6 +8,7 @@ import {
 } from "~/client/components/ui/collapsible";
 import {
   SidebarGroup,
+  SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
@@ -65,7 +66,9 @@ export function CategoryEntry({
   return (
     <SidebarGroup>
       <SidebarGroupLabel>{label}</SidebarGroupLabel>
-      <SidebarMenu>{children}</SidebarMenu>
+      <SidebarGroupContent>
+        <SidebarMenu>{children}</SidebarMenu>
+      </SidebarGroupContent>
     </SidebarGroup>
   );
 }
