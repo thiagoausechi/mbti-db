@@ -65,7 +65,7 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   return (
-    <html>
+    <html lang={locale}>
       <body className={`${openSans.variable}`}>
         <Providers>
           <Navbar />
