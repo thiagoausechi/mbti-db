@@ -1,4 +1,6 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, type Locale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 import {
   Card,
   CardDescription,
@@ -7,7 +9,10 @@ import {
 } from "~/client/components/ui/card";
 import { HalfColumnContent, Main } from "~/client/components/ui/content";
 
-export default function HomePage() {
+export default function HomePage({ params }: PageProps<"/[locale]/home">) {
+  const { locale } = use(params);
+  setRequestLocale(locale as Locale);
+
   const t = useTranslations("Pages.home");
 
   return (
