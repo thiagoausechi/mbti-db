@@ -62,19 +62,12 @@ function QuarterColumnContent({
 
 function PrimaryContent({
   className,
-  centered = false,
   ...props
-}: React.ComponentProps<"section"> & {
-  centered?: boolean;
-}) {
+}: React.ComponentProps<"section">) {
   return (
     <section
       data-slot="primary-content"
-      data-centered={centered}
-      className={merge(
-        "col-span-4 md:col-span-8 data-[centered=true]:lg:col-start-3",
-        className,
-      )}
+      className={merge("col-span-4 md:col-span-8 lg:col-span-9", className)}
       {...props}
     />
   );
