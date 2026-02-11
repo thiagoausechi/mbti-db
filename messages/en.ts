@@ -21,6 +21,11 @@ const en: Messages = {
       open: "Open sidebar",
       close: "Close sidebar",
     },
+    theme: {
+      toggle: "Toggle theme",
+      light: "Light",
+      dark: "Dark",
+    },
   },
 
   Pages: {

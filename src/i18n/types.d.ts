@@ -47,6 +47,11 @@ declare module "next-intl" {
           open: string;
           close: string;
         };
+        theme: {
+          toggle: string;
+          light: string;
+          dark: string;
+        };
       };
 
       Pages: {
