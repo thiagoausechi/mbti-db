@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import type { Locale } from "next-intl";
-import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Open_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
 import { AppFooter } from "~/client/components/layout/footer";
 import { Navbar } from "~/client/components/layout/navbar";
-import { SidebarProvider } from "~/client/components/ui/sidebar";
-import { TooltipProvider } from "~/client/components/ui/tooltip";
+import { Providers } from "~/client/components/providers";
 import { routing } from "~/i18n/routing";
 import "../globals.css";
 
@@ -68,17 +67,13 @@ export default async function RootLayout({
   return (
     <html>
       <body className={`${openSans.variable}`}>
-        <NextIntlClientProvider>
-          <TooltipProvider>
-            <SidebarProvider>
-              <Navbar />
-              <div className="w-full min-h-screen">
-                {children}
-                <AppFooter />
-              </div>
-            </SidebarProvider>
-          </TooltipProvider>
-        </NextIntlClientProvider>
+        <Providers>
+          <Navbar />
+          <div className="w-full min-h-screen">
+            {children}
+            <AppFooter />
+          </div>
+        </Providers>
       </body>
     </html>
   );
