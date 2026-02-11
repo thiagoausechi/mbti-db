@@ -65,7 +65,7 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${openSans.variable}`}>
         <Providers>
           <Navbar />
