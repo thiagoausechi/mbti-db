@@ -1,25 +1,9 @@
-import { useTranslations } from "next-intl";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "~/client/components/ui/card";
-import { HalfColumnContent, Main } from "~/client/components/ui/content";
+import type { Locale } from "next-intl";
+import { use } from "react";
+import { redirect } from "~/i18n/navigation";
 
-export default function HomePage() {
-  const t = useTranslations("Pages.home");
+export default function RootPage({ params }: PageProps<"/[locale]">) {
+  const { locale } = use(params);
 
-  return (
-    <Main>
-      <HalfColumnContent className="my-auto" centered>
-        <Card>
-          <CardHeader className="text-center">
-            <CardTitle>{t("title")}</CardTitle>
-            <CardDescription>{t("subtitle")}</CardDescription>
-          </CardHeader>
-        </Card>
-      </HalfColumnContent>
-    </Main>
-  );
+  redirect({ href: "/home", locale: locale as Locale });
 }
