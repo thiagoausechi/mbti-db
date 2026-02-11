@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import type { Locale } from "next-intl";
-import { NextIntlClientProvider } from "next-intl";
-import { getTranslations } from "next-intl/server";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Open_Sans } from "next/font/google";
+import { notFound } from "next/navigation";
 import { AppFooter } from "~/client/components/layout/footer";
 import { Navbar } from "~/client/components/layout/navbar";
 import { SidebarProvider } from "~/client/components/ui/sidebar";
 import { TooltipProvider } from "~/client/components/ui/tooltip";
+import { routing } from "~/i18n/routing";
 import "../globals.css";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
 });
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 interface MetadataProps {
   params: Promise<{ locale: Locale }>;
@@ -51,7 +57,14 @@ export async function generateMetadata(
   };
 }
 
-export default function RootLayout({ children }: LayoutProps<"/[locale]">) {
+export default async function RootLayout({
+  children,
+  params,
+}: LayoutProps<"/[locale]">) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
+  setRequestLocale(locale);
+
   return (
     <html>
       <body className={`${openSans.variable}`}>
