@@ -16,8 +16,18 @@ import {
 import { z } from "zod/mini";
 
 import type { Energy, EnergyMeaning } from "../preferences/energy";
-import { Intuition, Sensing } from "../preferences/mind";
-import { Feeling, Thinking } from "../preferences/nature";
+import {
+  Intuition,
+  IntuitiveMind,
+  Sensing,
+  SensingMind,
+} from "../preferences/mind";
+import {
+  Feeling,
+  FeelingNature,
+  Thinking,
+  ThinkingNature,
+} from "../preferences/nature";
 
 export const cognitiveFunctions = [
   Sensing,
@@ -64,6 +74,13 @@ export const oppositeCognitiveFunctionMeaning = {
   [Thinking]: Feeling,
   [Feeling]: Thinking,
 } as const;
+
+export const cognitiveFunctionToAcronymMap = {
+  [Sensing]: SensingMind,
+  [Intuition]: IntuitiveMind,
+  [Thinking]: ThinkingNature,
+  [Feeling]: FeelingNature,
+};
 
 export * from "./judging";
 export * from "./perceiving";
