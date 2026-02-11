@@ -29,3 +29,13 @@ export const personalitiesAcronymsSchema = z.union([
   z.enum(PERSONALITIES_ACRONYMS_WITH_IDENTITY),
 ]);
 export type Personality = z.infer<typeof personalitiesAcronymsSchema>;
+
+const removeIdentityRegex = new RegExp(IdentityPreferences.join("|"), "g");
+export function removeIdentity(
+  personality: Personality,
+): PersonalityWithoutIdentity {
+  return personality.replace(
+    removeIdentityRegex,
+    "",
+  ) as PersonalityWithoutIdentity;
+}
