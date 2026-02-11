@@ -1,4 +1,6 @@
-import { ChevronRight, type LucideIcon } from "lucide-react";
+import { ChevronRight, Moon, Sun, type LucideIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 import type { PropsWithChildren } from "react";
 import { Button } from "~/client/components/ui/button";
 import {
@@ -104,5 +106,35 @@ export function CollapsibleEntry({
         </CollapsibleContent>
       </SidebarMenuItem>
     </Collapsible>
+  );
+}
+
+export function ThemeSwitcherEntry() {
+  const t = useTranslations("Actions.theme");
+  const { setTheme } = useTheme();
+
+  const toggleTheme = () =>
+    setTheme((oldTheme) => (oldTheme === "light" ? "dark" : "light"));
+
+  return (
+    <SidebarMenuItem>
+      <SidebarMenuButton
+        className="w-full"
+        tooltip={t("toggle")}
+        render={
+          <Button
+            onClick={toggleTheme}
+            variant="secondary"
+            className="justify-start"
+            full
+          >
+            <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+            <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+
+            <SidebarMenuItemLabel>{t("toggle")}</SidebarMenuItemLabel>
+          </Button>
+        }
+      />
+    </SidebarMenuItem>
   );
 }
