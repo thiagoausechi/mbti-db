@@ -18,7 +18,7 @@ export function NavbarContent() {
           <LinkEntry
             label={t("Pages.home.metadata.navigation")}
             icon={Home}
-            href="/"
+            href="/home"
           />
 
           <CollapsibleEntry
