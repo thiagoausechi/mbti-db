@@ -3,8 +3,10 @@ import { use } from "react";
 import { FullColumnContent } from "~/client/components/ui/content";
 import { EnergyCard } from "~/features/guidebook/cognitive-functions/components/energy-card";
 import { SummaryCard } from "~/features/guidebook/cognitive-functions/components/summary-card";
-import type { CognitiveFunction } from "~/shared/enums/mbti/cognitive-functions";
-import { cognitiveFunctions } from "~/shared/enums/mbti/cognitive-functions";
+import {
+  type CognitiveFunction,
+  cognitiveFunctions,
+} from "~/shared/enums/mbti/cognitive-functions";
 
 export async function generateStaticParams() {
   return cognitiveFunctions.map((slug) => ({ slug }));
