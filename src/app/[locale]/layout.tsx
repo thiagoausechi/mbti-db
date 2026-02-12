@@ -69,7 +69,7 @@ export default async function RootLayout({
       <body className={`${openSans.variable}`}>
         <Providers>
           <Navbar />
-          <div className="w-full min-h-screen">
+          <div className="flex flex-col justify-between w-full min-h-screen">
             {children}
             <AppFooter />
           </div>

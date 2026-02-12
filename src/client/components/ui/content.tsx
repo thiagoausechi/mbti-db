@@ -6,7 +6,7 @@ function Main({ className, ...props }: React.ComponentProps<"main">) {
     <main
       data-slot="app-content"
       className={merge(
-        "container mx-auto p-surface min-h-screen grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-surface items-start",
+        "container mx-auto p-surface grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-surface items-start",
         className,
       )}
       {...props}

@@ -16,7 +16,7 @@ export default function HomePage({ params }: PageProps<"/[locale]/home">) {
   const t = useTranslations("Pages.home");
 
   return (
-    <Main>
+    <Main className="grow">
       <HalfColumnContent className="my-auto" centered>
         <Card>
           <CardHeader className="text-center">
