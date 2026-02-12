@@ -5,7 +5,7 @@ export function AppFooter() {
   const t = useTranslations("Metadata");
 
   return (
-    <footer className="px-surface">
+    <footer className="container mx-auto px-surface">
       <Card className="rounded-b-none">
         <CardContent className="text-xs grid grid-cols-1 md:grid-cols-2 gap-surface">
           <div>
