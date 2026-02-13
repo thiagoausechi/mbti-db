@@ -34,7 +34,7 @@ export function LinkEntry({
   asSubitem?: boolean;
 }) {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const isActive = pathname.includes(href);
   const MenuItemComp = asSubitem ? SidebarMenuSubItem : SidebarMenuItem;
   const MenuButtonComp = asSubitem ? SidebarMenuSubButton : SidebarMenuButton;
 
