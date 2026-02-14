@@ -1,16 +1,20 @@
 import * as React from "react";
 import { merge } from "~/client/lib/merge-class-name";
+import { AppFooter } from "../layout/footer";
 
 function Main({ className, ...props }: React.ComponentProps<"main">) {
   return (
-    <main
-      data-slot="app-content"
-      className={merge(
-        "container mx-auto p-surface grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-surface items-start",
-        className,
-      )}
-      {...props}
-    />
+    <div className="flex flex-col justify-between w-full min-h-screen">
+      <main
+        data-slot="app-content"
+        className={merge(
+          "container mx-auto p-surface grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-surface items-start",
+          className,
+        )}
+        {...props}
+      />
+      <AppFooter />
+    </div>
   );
 }
 

@@ -4,7 +4,6 @@ import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Open_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
-import { AppFooter } from "~/client/components/layout/footer";
 import { Navbar } from "~/client/components/layout/navbar";
 import { Providers } from "~/client/components/providers";
 import { routing } from "~/i18n/routing";
@@ -69,10 +68,7 @@ export default async function RootLayout({
       <body className={`${openSans.variable}`}>
         <Providers>
           <Navbar />
-          <div className="flex flex-col justify-between w-full min-h-screen">
-            {children}
-            <AppFooter />
-          </div>
+          {children}
         </Providers>
       </body>
     </html>

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { use } from "react";
-import { FullColumnContent } from "~/client/components/ui/content";
+import { FullColumnContent, Main } from "~/client/components/ui/content";
 import { EnergyCard } from "~/features/guidebook/cognitive-functions/components/energy-card";
 import { SummaryCard } from "~/features/guidebook/cognitive-functions/components/summary-card";
 import {
@@ -21,7 +21,7 @@ export default function GuidebookFunctionPage({
   if (!cognitiveFunctions.includes(cognitiveFunction)) return notFound();
 
   return (
-    <>
+    <Main>
       <FullColumnContent>
         <SummaryCard cognitiveFunction={cognitiveFunction} />
       </FullColumnContent>
@@ -37,6 +37,6 @@ export default function GuidebookFunctionPage({
           />
         </div>
       </FullColumnContent>
-    </>
+    </Main>
   );
 }
