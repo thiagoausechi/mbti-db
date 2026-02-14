@@ -277,6 +277,56 @@ const en: Messages = {
         },
       },
     },
+
+    Extras: {
+      styles: {
+        communication: {
+          conclusive: {
+            title: "Conclusive",
+            description:
+              "They prefer to process their thoughts internally, only sharing them once they have reached a definite conclusion. Their communication is often deliberate and finalized.",
+          },
+          opinionated: {
+            title: "Opinionated",
+            description:
+              "With a strong focus on their own identity and internal framework, they prefer to keep external options open rather than imposing definitive conclusions on the world.",
+          },
+          decisive: {
+            title: "Decisive",
+            description:
+              "Their communication style is direct and action-oriented. They are quick to organize their environment and make decisions that impact the people around them.",
+          },
+          "open-minded": {
+            title: "Open-minded",
+            description:
+              "Driven by immediate sensations or endless possibilities, they prefer to keep conversations and options flowing rather than locking themselves into definitive decisions.",
+          },
+        },
+
+        reasoning: {
+          analytical: {
+            title: "Analytical",
+            description:
+              "This group combines an imaginative view of the world (Intuition) with a pragmatic approach to empathy (Thinking). They value competence, logic, and long-term strategies.",
+          },
+          experiential: {
+            title: "Experiential",
+            description:
+              "This group combines an imaginative view of the world (Intuition) with a fraternal approach to empathy (Feeling). They focus on meaning, ideals, and human potential.",
+          },
+          practical: {
+            title: "Practical",
+            description:
+              "This group combines a realistic view of the world (Sensing) with a pragmatic approach to empathy (Thinking). They rely on facts, efficiency, and concrete results.",
+          },
+          relational: {
+            title: "Relational",
+            description:
+              "This group combines a realistic view of the world (Sensing) with a fraternal approach to empathy (Feeling). They prioritize social connection, service, and immediate harmony.",
+          },
+        },
+      },
+    },
   },
 };
 

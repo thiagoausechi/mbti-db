@@ -2,6 +2,10 @@ import type { formats } from "~/i18n/request";
 import type { routing } from "~/i18n/routing";
 import type { CognitiveFunction } from "~/shared/enums/mbti/cognitive-functions";
 import type { StackType } from "~/shared/enums/mbti/cognitive-functions/stack";
+import type {
+  CommunicationStyle,
+  ReasoningStyle,
+} from "~/shared/enums/mbti/extras/styles";
 import type { PersonalityWithoutIdentity } from "~/shared/enums/mbti/personalities";
 import type {
   Energy,
@@ -89,6 +93,13 @@ declare module "next-intl" {
           percieving: string;
           judging: string;
         } & Record<CognitiveFunction, CognitiveFunctionInfo>;
+
+        Extras: {
+          styles: {
+            communication: Record<CommunicationStyle, Descriptive>;
+            reasoning: Record<ReasoningStyle, Descriptive>;
+          };
+        };
       };
     };
   }
