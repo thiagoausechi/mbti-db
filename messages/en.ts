@@ -67,41 +67,103 @@ const en: Messages = {
         energy: {
           title: "Energy Gain",
           description:
+            "This trait determines how we interact with our environment and where we direct our mental energy.",
+          summary:
             "Extroverts gain energy from external activities and interacting with other people and the external world, while Introverts gain energy from more reserved and inwardly focused activities.",
-          e: { he: "Extraverted", she: "Extraverted", they: "Extraverted" },
-          i: { he: "Introverted", she: "Introverted", they: "Introverted" },
+          e: {
+            label: {
+              he: "Extraverted",
+              she: "Extraverted",
+              they: "Extraverted",
+            },
+            description:
+              "Extraverted individuals prefer group activities and get energized by social interaction. They tend to be enthusiastic and easily excited.",
+          },
+          i: {
+            label: {
+              he: "Introverted",
+              she: "Introverted",
+              they: "Introverted",
+            },
+            description:
+              "Introverted individuals prefer solitary activities and get exhausted by social interaction. They tend to be quite sensitive to external stimulation (e.g. sound, sight, or smell).",
+          },
         },
 
         mind: {
           title: "Information Gathering",
           description:
+            "This trait determines how we see the world and process information.",
+          summary:
             "Sensors seek information primarily in concrete, historical, and realistic data about the world. Intuitives, on the other hand, prioritize imagination, interpretations, and the nuances between relationships.",
-          s: { he: "Observant", she: "Observant", they: "Observant" },
-          n: { he: "Intuitive", she: "Intuitive", they: "Intuitive" },
+          s: {
+            label: { he: "Sensing", she: "Observant", they: "Observant" },
+            description:
+              "Observant individuals are highly practical, pragmatic, and down-to-earth. They tend to have strong habits and focus on what is happening or has already happened.",
+          },
+          n: {
+            label: { he: "Intuitive", she: "Intuitive", they: "Intuitive" },
+            description:
+              "Intuitive individuals are very imaginative, open-minded, and curious. They prefer novelty over stability and focus on hidden meanings and future possibilities.",
+          },
         },
 
         nature: {
           title: "Decision Making",
           description:
+            "This trait determines how we make decisions and cope with emotions.",
+          summary:
             "Thinkers are logical and objective and have considerable regard for laws and facts. Feelers prioritize values and people over rules. They decide based on interpersonal harmony.",
-          t: { he: "Thinking", she: "Thinking", they: "Thinking" },
-          f: { he: "Feeling", she: "Feeling", they: "Feeling" },
+          t: {
+            label: { he: "Thinking", she: "Thinking", they: "Thinking" },
+            description:
+              "Thinking individuals focus on objectivity and rationality, prioritizing logic over emotions. They tend to hide their feelings and see efficiency as more important than cooperation.",
+          },
+          f: {
+            label: { he: "Feeling", she: "Feeling", they: "Feeling" },
+            description:
+              "Feeling individuals are sensitive and emotionally expressive. They are more empathic and less competitive than Thinking types, and focus on social harmony and cooperation.",
+          },
         },
 
         tactic: {
           title: "Lifestyle",
           description:
+            "This trait reflects our approach to work, planning, and decision-making.",
+          summary:
             "Judgers prefer a more organized and methodical lifestyle, while Perceivers are more flexible and adaptable to various situations.",
-          j: { he: "Judging", she: "Judging", they: "Judging" },
-          p: { he: "Prospecting", she: "Prospecting", they: "Prospecting" },
+          j: {
+            label: { he: "Judging", she: "Judging", they: "Judging" },
+            description:
+              "Judging individuals are decisive, thorough, and highly organized. They value clarity, predictability, and closure, preferring structure and planning to spontaneity.",
+          },
+          p: {
+            label: {
+              he: "Prospecting",
+              she: "Prospecting",
+              they: "Prospecting",
+            },
+            description:
+              "Prospecting individuals are very good at improvising and spotting opportunities. They tend to be flexible, relaxed nonconformists who prefer keeping their options open.",
+          },
         },
 
         identity: {
           title: "Identity",
           description:
-            "Assertive individuals are self-confident, level-headed, and resistant to stress. They don't worry much, but this is different from apathy. Turbulent individuals are sensitive to stress, prone to worry, and perfectionistic. They are always seeking self-improvement.",
-          "-a": { he: "Assertive", she: "Assertive", they: "Assertive" },
-          "-t": { he: "Turbulent", she: "Turbulent", they: "Turbulent" },
+            "This trait underpins all others, showing how confident we are in our abilities and decisions.",
+          summary:
+            "Assertive individuals are self-confident, level-headed, and resistant to stress. Turbulent individuals are sensitive to stress, prone to worry, and perfectionistic.",
+          "-a": {
+            label: { he: "Assertive", she: "Assertive", they: "Assertive" },
+            description:
+              "Assertive individuals are self-assured, even-tempered, and resistant to stress. They refuse to worry too much and do not push themselves too hard when it comes to achieving goals.",
+          },
+          "-t": {
+            label: { he: "Turbulent", she: "Turbulent", they: "Turbulent" },
+            description:
+              "Turbulent individuals are self-conscious and sensitive to stress. They are likely to experience a wide range of emotions and to be success-driven, perfectionistic, and eager to improve.",
+          },
         },
       },
 

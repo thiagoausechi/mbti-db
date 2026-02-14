@@ -36,6 +36,16 @@ type Page<T> = {
   metadata: { slug: string; navigation: string };
 } & T;
 
+type PreferencesInfo<T extends string> = Descriptive & {
+  summary: string;
+} & Record<
+    T,
+    {
+      label: PronounSensitive;
+      description: string;
+    }
+  >;
+
 declare module "next-intl" {
   interface AppConfig {
     Locale: (typeof routing.locales)[number];
@@ -80,11 +90,11 @@ declare module "next-intl" {
           roles: Record<Role, string>;
           personalities: Record<PersonalityWithoutIdentity, PronounSensitive>;
           preferences: {
-            energy: Record<Energy, PronounSensitive> & Descriptive;
-            mind: Record<Mind, PronounSensitive> & Descriptive;
-            nature: Record<Nature, PronounSensitive> & Descriptive;
-            tactic: Record<Tactic, PronounSensitive> & Descriptive;
-            identity: Record<Identity, PronounSensitive> & Descriptive;
+            energy: PreferencesInfo<Energy>;
+            mind: PreferencesInfo<Mind>;
+            nature: PreferencesInfo<Nature>;
+            tactic: PreferencesInfo<Tactic>;
+            identity: PreferencesInfo<Identity>;
           };
         };
 
