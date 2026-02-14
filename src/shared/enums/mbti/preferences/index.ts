@@ -1,9 +1,15 @@
+import { z } from "zod/mini";
 import type { Personality } from "../personalities";
 import type { Energy } from "./energy";
 import type { Identity } from "./identity";
 import type { Mind } from "./mind";
 import type { Nature } from "./nature";
 import type { Tactic } from "./tactics";
+
+export const preferences = ["energy", "mind", "nature", "tactic"] as const;
+
+export const preferencesSchema = z.enum(preferences);
+export type Preference = z.infer<typeof preferencesSchema>;
 
 export type PersonalityPreferences = {
   energy: Energy;
