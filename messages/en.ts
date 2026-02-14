@@ -188,6 +188,8 @@ const en: Messages = {
     },
 
     CognitiveFunctions: {
+      title: "Cognitive Functions",
+
       stack: {
         dominant: "Dominant",
         auxiliary: "Auxiliary",
@@ -195,7 +197,7 @@ const en: Messages = {
         inferior: "Inferior",
       },
 
-      percieving: "Perceiving Functions",
+      perceiving: "Perceiving Functions",
       sensing: {
         title: "Sensing (S)",
         description:
@@ -342,7 +344,11 @@ const en: Messages = {
 
     Extras: {
       styles: {
+        title: "Styles",
+
         communication: {
+          title: "Communication",
+
           conclusive: {
             title: "Conclusive",
             description:
@@ -366,6 +372,8 @@ const en: Messages = {
         },
 
         reasoning: {
+          title: "Reasoning",
+
           analytical: {
             title: "Analytical",
             description:

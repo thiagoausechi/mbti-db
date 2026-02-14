@@ -25,7 +25,7 @@ export function NavbarContent() {
             label={t("Pages.guidebook.metadata.navigation")}
             icon={BookMarked}
           >
-            <CategoryEntry label={t("Theory.CognitiveFunctions.percieving")}>
+            <CategoryEntry label={t("Theory.CognitiveFunctions.perceiving")}>
               <LinkEntry
                 label={t("Theory.CognitiveFunctions.sensing.title")}
                 icon={cognitiveFunctionIconMap["sensing"].default}

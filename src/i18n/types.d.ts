@@ -20,8 +20,8 @@ import type { Gender } from "~/shared/enums/profile/genders";
 import type { Pronoun } from "~/shared/enums/profile/pronouns";
 import type { Visibility } from "~/shared/enums/profile/visibilities";
 
-type Descriptive = {
-  title: string;
+type Titled = { title: string };
+type Descriptive = Titled & {
   description: string;
 };
 
@@ -100,14 +100,15 @@ declare module "next-intl" {
 
         CognitiveFunctions: {
           stack: Stack;
-          percieving: string;
+          perceiving: string;
           judging: string;
-        } & Record<CognitiveFunction, CognitiveFunctionInfo>;
+        } & Titled &
+          Record<CognitiveFunction, CognitiveFunctionInfo>;
 
         Extras: {
-          styles: {
-            communication: Record<CommunicationStyle, Descriptive>;
-            reasoning: Record<ReasoningStyle, Descriptive>;
+          styles: Titled & {
+            communication: Titled & Record<CommunicationStyle, Descriptive>;
+            reasoning: Titled & Record<ReasoningStyle, Descriptive>;
           };
         };
       };
