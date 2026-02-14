@@ -5,6 +5,7 @@ import { useRender } from "@base-ui/react/use-render";
 import * as React from "react";
 
 import { PanelLeftIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "~/client/components/ui/button";
 import { Separator } from "~/client/components/ui/separator";
 import {
@@ -149,6 +150,7 @@ function Sidebar({
 }: React.ComponentProps<"div"> & {
   side?: "left" | "right";
 }) {
+  const t = useTranslations("Miscs.ScreenReader.sidebar.mobile");
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
 
   if (isMobile) {
@@ -168,8 +170,8 @@ function Sidebar({
           }
         >
           <SheetHeader className="sr-only">
-            <SheetTitle>Sidebar</SheetTitle>
-            <SheetDescription>Displays the mobile sidebar.</SheetDescription>
+            <SheetTitle>{t("title")}</SheetTitle>
+            <SheetDescription>{t("description")}</SheetDescription>
           </SheetHeader>
           <div className="flex h-full w-full flex-col">{children}</div>
         </SheetContent>
@@ -217,6 +219,7 @@ function SidebarTrigger({
   onClick,
   ...props
 }: React.ComponentProps<typeof Button>) {
+  const t = useTranslations("Actions.sidebar");
   const { toggleSidebar } = useSidebar();
 
   return (
@@ -233,7 +236,7 @@ function SidebarTrigger({
       {...props}
     >
       <PanelLeftIcon className="cn-rtl-flip" />
-      <span className="sr-only">Toggle Sidebar</span>
+      <span className="sr-only">{t("toggle")}</span>
     </Button>
   );
 }

@@ -20,6 +20,7 @@ const en: Messages = {
     sidebar: {
       open: "Open sidebar",
       close: "Close sidebar",
+      toggle: "Toggle sidebar",
     },
     theme: {
       toggle: "Toggle theme",
@@ -396,6 +397,24 @@ const en: Messages = {
           },
         },
       },
+    },
+  },
+
+  Miscs: {
+    ScreenReader: {
+      open: "Open",
+      close: "Close",
+      sidebar: {
+        mobile: {
+          title: "Sidebar",
+          description: "Displays the mobile sidebar.",
+        },
+      },
+    },
+
+    AcronymMeaning: {
+      title: "Acronym Meaning",
+      MBTI: "Myers-Briggs Type Indicator",
     },
   },
 };

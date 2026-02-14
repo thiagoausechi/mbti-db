@@ -60,6 +60,7 @@ declare module "next-intl" {
         sidebar: {
           open: string;
           close: string;
+          toggle: string;
         };
         theme: {
           toggle: string;
@@ -110,6 +111,21 @@ declare module "next-intl" {
             communication: Titled & Record<CommunicationStyle, Descriptive>;
             reasoning: Titled & Record<ReasoningStyle, Descriptive>;
           };
+        };
+      };
+
+      Miscs: {
+        ScreenReader: {
+          open: string;
+          close: string;
+          sidebar: {
+            mobile: Descriptive;
+          };
+        };
+
+        AcronymMeaning: {
+          title: string;
+          MBTI: string;
         };
       };
     };
