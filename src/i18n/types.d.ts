@@ -28,7 +28,10 @@ type Descriptive = Titled & {
 type Stack = Record<StackType, string>;
 
 type CognitiveFunctionInfo = Descriptive &
-  Record<EnergyMeaning, Descriptive & { stack: Stack }>;
+  Record<
+    EnergyMeaning,
+    Descriptive & { codename: string; snippet: string; stack: Stack }
+  >;
 
 type PronounSensitive<T = string> = Record<Pronoun, T>;
 
@@ -89,7 +92,14 @@ declare module "next-intl" {
       Theory: {
         MBTI: {
           roles: Record<Role, string>;
-          personalities: Record<PersonalityWithoutIdentity, PronounSensitive>;
+          personalities: Record<
+            PersonalityWithoutIdentity,
+            {
+              label: PronounSensitive;
+              motto: string;
+              snippet: string;
+            }
+          >;
           preferences: {
             energy: PreferencesInfo<Energy>;
             mind: PreferencesInfo<Mind>;

@@ -169,22 +169,106 @@ const en: Messages = {
       },
 
       personalities: {
-        intj: { he: "Architect", she: "Architect", they: "Architect" },
-        intp: { he: "Logician", she: "Logician", they: "Logician" },
-        entj: { he: "Commander", she: "Commander", they: "Commander" },
-        entp: { he: "Debater", she: "Debater", they: "Debater" },
-        infj: { he: "Advocate", she: "Advocate", they: "Advocate" },
-        infp: { he: "Mediator", she: "Mediator", they: "Mediator" },
-        enfj: { he: "Protagonist", she: "Protagonist", they: "Protagonist" },
-        enfp: { he: "Campaigner", she: "Campaigner", they: "Campaigner" },
-        istj: { he: "Logistician", she: "Logistician", they: "Logistician" },
-        isfj: { he: "Defender", she: "Defender", they: "Defender" },
-        estj: { he: "Executive", she: "Executive", they: "Executive" },
-        esfj: { he: "Consul", she: "Consul", they: "Consul" },
-        istp: { he: "Virtuoso", she: "Virtuoso", they: "Virtuoso" },
-        isfp: { he: "Adventurer", she: "Adventurer", they: "Adventurer" },
-        estp: { he: "Entrepreneur", she: "Entrepreneur", they: "Entrepreneur" },
-        esfp: { he: "Entertainer", she: "Entertainer", they: "Entertainer" },
+        intj: {
+          snippet:
+            "Imaginative and strategic thinkers, with a plan for everything.",
+          motto: "I know the most efficient way to do this.",
+          label: { he: "Architect", she: "Architect", they: "Architect" },
+        },
+        intp: {
+          snippet:
+            "Innovative inventors with an unquenchable thirst for knowledge.",
+          motto: "I need to analyze what is valid and what is baseless.",
+          label: { he: "Logician", she: "Logician", they: "Logician" },
+        },
+        entj: {
+          snippet:
+            "Bold, imaginative, and strong-willed leaders, always finding a way - or making one.",
+          motto: "I will tell you what needs to be done.",
+          label: { he: "Commander", she: "Commander", they: "Commander" },
+        },
+        entp: {
+          snippet:
+            "Smart and curious thinkers who cannot resist an intellectual challenge.",
+          motto: "Nothing is absolute; everything depends on context.",
+          label: { he: "Debater", she: "Debater", they: "Debater" },
+        },
+        infj: {
+          snippet:
+            "Quiet and mystical, yet very inspiring and tireless idealists.",
+          motto: "The world can be a better place.",
+          label: { he: "Advocate", she: "Advocate", they: "Advocate" },
+        },
+        infp: {
+          snippet:
+            "Poetic, kind, and altruistic people, always eager to help a good cause.",
+          motto: "In an ideal world, everyone respects each other.",
+          label: { he: "Mediator", she: "Mediator", they: "Mediator" },
+        },
+        enfj: {
+          snippet:
+            "Charismatic and inspiring leaders, able to mesmerize their listeners.",
+          motto: "I want everyone to be well and thrive together.",
+          label: { he: "Protagonist", she: "Protagonist", they: "Protagonist" },
+        },
+        enfp: {
+          snippet:
+            "Enthusiastic, creative, and sociable free spirits, who can always find a reason to smile.",
+          motto: "Life is best when shared with people.",
+          label: { he: "Campaigner", she: "Campaigner", they: "Campaigner" },
+        },
+        istj: {
+          snippet:
+            "Practical and fact-minded individuals, whose reliability cannot be doubted.",
+          motto: "Duty comes first.",
+          label: { he: "Logistician", she: "Logistician", they: "Logistician" },
+        },
+        isfj: {
+          snippet:
+            "Dedicated and warm protectors, always ready to defend their loved ones.",
+          motto: "I am here to help you, no matter what.",
+          label: { he: "Defender", she: "Defender", they: "Defender" },
+        },
+        estj: {
+          snippet:
+            "Excellent administrators, unsurpassed at managing things - or people.",
+          motto: "Let's get the job done right.",
+          label: { he: "Executive", she: "Executive", they: "Executive" },
+        },
+        esfj: {
+          snippet:
+            "Extraordinarily caring, social, and popular people, always eager to help.",
+          motto: "Allow me to be of service.",
+          label: { he: "Consul", she: "Consul", they: "Consul" },
+        },
+        istp: {
+          snippet:
+            "Bold and practical experimenters, masters of all kinds of tools.",
+          motto: "Leave it to me. I know how to handle this.",
+          label: { he: "Virtuoso", she: "Virtuoso", they: "Virtuoso" },
+        },
+        isfp: {
+          snippet:
+            "Flexible and charming artists, always ready to explore and experience something new.",
+          motto: "Let's create something beautiful.",
+          label: { he: "Adventurer", she: "Adventurer", they: "Adventurer" },
+        },
+        estp: {
+          snippet:
+            "Smart, energetic, and perceptive people, who truly enjoy living on the edge.",
+          motto: "I can do anything!",
+          label: {
+            he: "Entrepreneur",
+            she: "Entrepreneur",
+            they: "Entrepreneur",
+          },
+        },
+        esfp: {
+          snippet:
+            "Spontaneous, energetic, and enthusiastic entertainers - life is never boring around them.",
+          motto: "The perfect moment is now!",
+          label: { he: "Entertainer", she: "Entertainer", they: "Entertainer" },
+        },
       },
     },
 
@@ -207,6 +291,10 @@ const en: Messages = {
           title: "Extraverted Sensing (Se)",
           description:
             "Focuses on experiencing the external world in real-time through the five senses. It is highly attuned to the present environment, seeking stimuli, action, and immediate opportunities.",
+          codename: "Sensation",
+          snippet:
+            "Values immediate impact, aesthetics, physical instincts, vitality, and tangible reality.",
+
           stack: {
             dominant:
               "Life is to be lived in the now. It is adaptable, pragmatic, and loves action and new experiences. Reacts quickly to changes in the environment and has strong body and spatial awareness.",
@@ -222,6 +310,10 @@ const en: Messages = {
           title: "Introverted Sensing (Si)",
           description:
             "Focuses on internal sensory impressions and past experiences. It compares the present with the past to create a stable, reliable, and detailed map of the world.",
+          codename: "Stability",
+          snippet:
+            "Values routine, reliability, past experiences, familiar details, and established methods.",
+
           stack: {
             dominant:
               "Life is built on the foundation of what has been tested and proven. Trusts experience and tradition. It is detail-oriented, methodical, and responsible. Seeks stability and predictability.",
@@ -242,6 +334,10 @@ const en: Messages = {
           title: "Extraverted Intuition (Ne)",
           description:
             'Sees possibilities and connections in the external world. It generates multiple ideas, brainstorms, and explores different paths and potentials. It is the "what if?" function.',
+          codename: "Innovation",
+          snippet:
+            "Values potential, brainstorming, futuristic ideas, novel connections, and what could be.",
+
           stack: {
             dominant:
               "The world is a web of fascinating possibilities to be explored. It is creative, curious, and enthusiastic. Jumps from idea to idea, connecting seemingly unrelated concepts.",
@@ -257,6 +353,10 @@ const en: Messages = {
           title: "Introverted Intuition (Ni)",
           description:
             "Synthesizes information unconsciously to form a vision or insight about how things will work out in the future. It focuses on a single path or a deep, singular understanding.",
+          codename: "Insight",
+          snippet:
+            "Values depth, underlying patterns, hunches, subjective meaning, and future implications.",
+
           stack: {
             dominant:
               'Life is guided by an internal vision of the future. Has "aha!" moments and insights that seem to come from nowhere. It is strategic, focused, and determined to realize its vision, but may struggle to explain its process.',
@@ -279,6 +379,10 @@ const en: Messages = {
           title: "Extraverted Thinking (Te)",
           description:
             "Organizes and structures the external environment to achieve efficiency and productivity. It focuses on facts, data, and applying logic to create order and achieve goals.",
+          codename: "Efficiency",
+          snippet:
+            "Values organization, hierarchy, concrete data, measurable goals, and execution.",
+
           stack: {
             dominant:
               "Life is a system to be optimized. Organizes everything and everyone for maximum efficiency. It is assertive, decisive, and results-focused. Can appear controlling or overly blunt.",
@@ -294,6 +398,10 @@ const en: Messages = {
           title: "Introverted Thinking (Ti)",
           description:
             "Seeks precision and internal consistency of ideas and mental models. It disassembles concepts to understand their fundamental principles. Truth and logical clarity are paramount.",
+          codename: "Accuracy",
+          snippet:
+            "Values internal consistency, precise analysis, critique, and deep understanding of principles.",
+
           stack: {
             dominant:
               "The world is a puzzle to be understood. Analyzes internal systems of logic, seeking the purest truth. It is precise and analytical, but may struggle to express its complex ideas simply.",
@@ -314,6 +422,10 @@ const en: Messages = {
           title: "Extraverted Feeling (Fe)",
           description:
             "Seeks harmony in the external environment. It connects with others, understands social norms and others' feelings, and acts to maintain a positive and cooperative atmosphere.",
+          codename: "Harmony",
+          snippet:
+            "Values social cohesion, interpersonal connections, shared values, and the emotional atmosphere.",
+
           stack: {
             dominant:
               "Life is about connection and interpersonal harmony. It is empathetic, expressive, and actively seeks to care for the group's emotional needs. May neglect its own needs for the sake of harmony.",
@@ -329,6 +441,10 @@ const en: Messages = {
           title: "Introverted Feeling (Fi)",
           description:
             "Seeks consistency with an internal, personal value system. It focuses on authenticity, individual morality, and understanding one's own emotions in depth.",
+          codename: "Authenticity",
+          snippet:
+            "Values self-expression, personal resonance, moral boundaries, and inner harmony.",
+
           stack: {
             dominant:
               "Life is a journey in search of authenticity and meaning. Lives according to a strong internal moral code. It is reserved, empathetic, and passionate about its causes, but may struggle to express its feelings.",
