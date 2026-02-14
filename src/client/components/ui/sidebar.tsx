@@ -367,16 +367,29 @@ function SidebarMenuItem({ className, ...props }: React.ComponentProps<"li">) {
 
 function SidebarMenuItemLabel({
   className,
+  collapsedPlaceholder,
   ...props
-}: React.ComponentProps<"span">) {
+}: React.ComponentProps<"span"> & { collapsedPlaceholder?: React.ReactNode }) {
   return (
-    <span
-      className={merge(
-        "truncate group-data-[collapsible=icon]:hidden",
-        className,
+    <>
+      {collapsedPlaceholder && (
+        <span
+          className={merge(
+            "truncate hidden group-data-[collapsible=icon]:inline",
+            className,
+          )}
+        >
+          {collapsedPlaceholder}
+        </span>
       )}
-      {...props}
-    />
+      <span
+        className={merge(
+          "truncate inline group-data-[collapsible=icon]:hidden",
+          className,
+        )}
+        {...props}
+      />
+    </>
   );
 }
 
