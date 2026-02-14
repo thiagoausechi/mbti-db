@@ -144,8 +144,11 @@ function Sidebar({
   className,
   children,
   dir,
+  side = "left",
   ...props
-}: React.ComponentProps<"div">) {
+}: React.ComponentProps<"div"> & {
+  side?: "left" | "right";
+}) {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
 
   if (isMobile) {
@@ -153,6 +156,7 @@ function Sidebar({
       <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
         <SheetContent
           dir={dir}
+          side={side}
           data-sidebar="sidebar"
           data-slot="sidebar"
           data-mobile="true"
@@ -177,6 +181,7 @@ function Sidebar({
     <div
       className="group peer text-dark-tone hidden md:block"
       data-state={state}
+      data-side={side}
       data-collapsible={state === "collapsed" ? "icon" : ""}
       data-slot="sidebar"
     >
@@ -190,7 +195,7 @@ function Sidebar({
       <div
         data-slot="sidebar-container"
         className={merge(
-          "fixed inset-y-0 z-10 hidden h-svh min-w-fit group-data-[collapsible=icon]:w-[104px] w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear left-0 md:flex",
+          "fixed inset-y-0 z-10 hidden h-svh min-w-fit group-data-[collapsible=icon]:w-[104px] w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear group-data-[side=left]:left-0 group-data-[side=right]:right-0 md:flex",
           className,
         )}
         {...props}
@@ -198,7 +203,7 @@ function Sidebar({
         <div
           data-sidebar="sidebar"
           data-slot="sidebar-inner"
-          className="bg-light-tone shadow-elevation-neumorphic rounded-r-surface flex size-full flex-col"
+          className="bg-light-tone shadow-elevation-neumorphic group-data-[side=left]:rounded-r-surface group-data-[side=right]:rounded-l-surface flex size-full flex-col"
         >
           {children}
         </div>
