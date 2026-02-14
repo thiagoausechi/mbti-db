@@ -1,4 +1,5 @@
 import { z } from "zod/mini";
+import type { PersonalityWithoutIdentity } from "./personalities";
 import { parsePersonalityPreferences } from "./preferences";
 import { IntuitiveMind, SensingMind } from "./preferences/mind";
 import { FeelingNature, ThinkingNature } from "./preferences/nature";
@@ -13,6 +14,20 @@ export const Roles = [Analysts, Diplomats, Sentinels, Explorers] as const;
 export const roleSchema = z.enum(Roles);
 
 export type Role = z.infer<typeof roleSchema>;
+
+export function groupPersonalitiesByRole<T extends PersonalityWithoutIdentity>(
+  personalities: T[],
+) {
+  return Roles.reduce(
+    (acc, role) => {
+      acc[role] = personalities.filter(
+        (personality) => parseRoleFromPersonality(personality) === role,
+      );
+      return acc;
+    },
+    {} as Record<Role, T[]>,
+  );
+}
 
 export function parseRoleFromPersonality(personality: string): Role {
   const { mind, nature, tactic } = parsePersonalityPreferences(personality);
