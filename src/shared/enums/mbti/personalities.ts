@@ -39,3 +39,9 @@ export function removeIdentity(
     "",
   ) as PersonalityWithoutIdentity;
 }
+
+export function isValidPersonality(
+  personality: string,
+): personality is Personality {
+  return personalitiesAcronymsSchema.safeParse(personality).success;
+}
