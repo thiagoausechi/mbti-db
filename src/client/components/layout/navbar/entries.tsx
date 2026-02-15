@@ -20,6 +20,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "~/client/components/ui/sidebar";
+import { merge } from "~/client/lib/merge-class-name";
 import { Link, usePathname } from "~/i18n/navigation";
 
 export function LinkEntry({
@@ -45,7 +46,12 @@ export function LinkEntry({
         className="w-full"
         tooltip={label}
         render={
-          <Link href={href}>
+          <Link
+            href={href}
+            aria-disabled={isActive}
+            tabIndex={isActive ? 0 : -1}
+            className={merge(isActive ? "pointer-events-none" : "")}
+          >
             <Button
               variant={isActive ? "active" : "secondary"}
               className="justify-start"
