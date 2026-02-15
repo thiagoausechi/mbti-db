@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "~/client/components/ui/card";
@@ -31,9 +32,10 @@ export function EnergyCard({
         <CardTitle>
           <h2 className="flex gap-layout items-center text-2xl">
             <TitleIcon className="drop-shadow-neumorphic" size={32} />
-            {tEnergy("title")}
+            {tEnergy("title")} - "{tEnergy("codename")}"
           </h2>
         </CardTitle>
+        <CardDescription>{tEnergy("snippet")}</CardDescription>
       </CardHeader>
 
       <CardContent className="grid grid-rows-subgrid row-span-5 gap-y-layout">
