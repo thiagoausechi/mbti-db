@@ -42,9 +42,9 @@ export function EnergyCard({
         <p>{tEnergy("description")}</p>
 
         {stackTypes.map((type) => (
-          <p key={type}>
+          <li key={type}>
             <strong>{tStack(type)}:</strong> {tEnergy(`stack.${type}`)}
-          </p>
+          </li>
         ))}
       </CardContent>
     </Card>
