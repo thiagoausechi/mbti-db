@@ -97,3 +97,4 @@ export function getFunctionCode<F extends CognitiveFunction, E extends Energy>({
 
 export * from "./judging";
 export * from "./perceiving";
+export * from "./stack";

@@ -1,7 +1,9 @@
 import type { formats } from "~/i18n/request";
 import type { routing } from "~/i18n/routing";
-import type { CognitiveFunction } from "~/shared/enums/mbti/cognitive-functions";
-import type { StackType } from "~/shared/enums/mbti/cognitive-functions/stack";
+import type {
+  CognitiveFunction,
+  StackType,
+} from "~/shared/enums/mbti/cognitive-functions";
 import type {
   CommunicationStyle,
   ReasoningStyle,

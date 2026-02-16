@@ -9,8 +9,8 @@ import {
 import {
   type CognitiveFunction,
   cognitiveFunctionIconMap,
+  stackTypes,
 } from "~/shared/enums/mbti/cognitive-functions";
-import { stackTypes } from "~/shared/enums/mbti/cognitive-functions/stack";
 import type { EnergyMeaning } from "~/shared/enums/mbti/preferences/energy";
 
 export function EnergyCard({
