@@ -126,7 +126,7 @@
 
 .sentinels {
   --light-tone: var(--sentinels-100);
-  --dark-tone: var(--sentinels-400);
+  --dark-tone: var(--sentinels-600);
   --border: var(--sentinels-300);
 
   --effect-neumorphic-light: var(--sentinels-50);
@@ -144,7 +144,7 @@
 
 .explorers {
   --light-tone: var(--explorers-100);
-  --dark-tone: var(--explorers-500);
+  --dark-tone: var(--explorers-600);
   --border: var(--explorers-300);
 
   --effect-neumorphic-light: var(--explorers-50);
