@@ -1,4 +1,4 @@
-import { BookMarked, Home } from "lucide-react";
+import { BookMarked, Drama, Home } from "lucide-react";
 import { useTranslations } from "next-intl";
 import {
   SidebarContent,
@@ -25,6 +25,13 @@ export function NavbarContent() {
             label={t("Pages.guidebook.metadata.navigation")}
             icon={BookMarked}
           >
+            <LinkEntry
+              label={t("Pages.guidebook.personalities.metadata.navigation")}
+              icon={Drama}
+              href="/guidebook/personalities"
+              asSubitem
+            />
+
             <CategoryEntry label={t("Theory.CognitiveFunctions.perceiving")}>
               <LinkEntry
                 label={t("Theory.CognitiveFunctions.sensing.title")}
