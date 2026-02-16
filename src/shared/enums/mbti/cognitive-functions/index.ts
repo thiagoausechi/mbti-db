@@ -85,5 +85,15 @@ export const cognitiveFunctionToAcronymMap = {
   [Feeling]: FeelingNature,
 } as const;
 
+export function getFunctionCode<F extends CognitiveFunction, E extends Energy>({
+  function: fn,
+  attitude,
+}: OrientedCognitiveFunction<F, E>) {
+  const letter = cognitiveFunctionToAcronymMap[fn].toUpperCase() as Uppercase<
+    (typeof cognitiveFunctionToAcronymMap)[F]
+  >;
+  return `${letter}${attitude}` as const;
+}
+
 export * from "./judging";
 export * from "./perceiving";
