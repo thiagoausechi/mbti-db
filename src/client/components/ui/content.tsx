@@ -4,11 +4,11 @@ import { AppFooter } from "../layout/footer";
 
 function Main({ className, ...props }: React.ComponentProps<"main">) {
   return (
-    <div className="flex flex-col justify-between w-full min-h-screen">
+    <div className="@container/main flex flex-col justify-between w-full min-h-screen">
       <main
         data-slot="app-content"
         className={merge(
-          "container mx-auto p-surface grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-surface items-start",
+          "container mx-auto p-surface grid grid-cols-4 @2xl/main:grid-cols-8 @6xl/main:grid-cols-12 gap-surface items-start",
           className,
         )}
         {...props}
@@ -25,7 +25,10 @@ function FullColumnContent({
   return (
     <section
       data-slot="full-column-content"
-      className={merge("col-span-4 md:col-span-8 lg:col-span-12", className)}
+      className={merge(
+        "col-span-4 @2xl/main:col-span-8 @6xl/main:col-span-12",
+        className,
+      )}
       {...props}
     />
   );
@@ -43,7 +46,7 @@ function HalfColumnContent({
       data-slot="half-column-content"
       data-centered={centered}
       className={merge(
-        "col-span-4 lg:col-span-6 data-[centered=true]:md:col-start-3 data-[centered=true]:lg:col-start-4",
+        "col-span-4 @6xl/main:col-span-6 data-[centered=true]:@2xl/main:col-start-3 data-[centered=true]:@6xl/main:col-start-4",
         className,
       )}
       {...props}
@@ -58,7 +61,7 @@ function QuarterColumnContent({
   return (
     <div
       data-slot="quarter-column-content"
-      className={merge("col-span-4 lg:col-span-3", className)}
+      className={merge("col-span-4 @6xl/main:col-span-3", className)}
       {...props}
     />
   );
@@ -71,7 +74,10 @@ function PrimaryContent({
   return (
     <section
       data-slot="primary-content"
-      className={merge("col-span-4 md:col-span-8 lg:col-span-9", className)}
+      className={merge(
+        "col-span-4 @2xl/main:col-span-8 @6xl/main:col-span-9",
+        className,
+      )}
       {...props}
     />
   );
@@ -89,7 +95,7 @@ function AsideContent({
       data-slot="aside-content"
       data-centered={centered}
       className={merge(
-        "col-span-4 md:col-span-8 lg:col-span-4 data-[centered=true]:lg:col-start-5",
+        "col-span-4 @2xl/main:col-span-8 @6xl/main:col-span-4 data-[centered=true]:@6xl/main:col-start-5",
         className,
       )}
       {...props}
