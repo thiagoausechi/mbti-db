@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import type { Locale } from "next-intl";
 import { hasLocale } from "next-intl";
@@ -70,6 +71,7 @@ export default async function RootLayout({
           <Navbar />
           {children}
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
