@@ -95,6 +95,7 @@ export function getFunctionCode<F extends CognitiveFunction, E extends Energy>({
   return `${letter}${attitude}` as const;
 }
 
+export * from "./axis";
 export * from "./judging";
 export * from "./perceiving";
 export * from "./stack";

@@ -1,6 +1,9 @@
 import type { formats } from "~/i18n/request";
 import type { routing } from "~/i18n/routing";
 import type {
+  AxisMacro,
+  AxisPair,
+  AxisRole,
   CognitiveFunction,
   StackType,
 } from "~/shared/enums/mbti/cognitive-functions";
@@ -115,6 +118,12 @@ declare module "next-intl" {
           stack: Stack;
           perceiving: string;
           judging: string;
+
+          Axes: Descriptive & {
+            roles: Record<AxisRole, Descriptive>;
+            macros: Record<AxisMacro, string>;
+            pairs: Record<AxisPair, Record<AxisRole | "concept", string>>;
+          };
         } & Titled &
           Record<CognitiveFunction, CognitiveFunctionInfo>;
 

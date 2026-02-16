@@ -457,6 +457,83 @@ const en: Messages = {
           },
         },
       },
+
+      Axes: {
+        title: "Cognitive Axes",
+        description:
+          "A Cognitive Axis represents a unified polarity between two opposing mental processes that work in tandem as a single system. It is based on the principle that every psychological perspective requires a necessary counterbalance—for instance, objective execution (Te) is inextricably linked to subjective valuation (Fi). These axes describe the dynamic tension between how a person interacts with the world (Core) and the underlying standard that grounds that interaction (Support).",
+
+        roles: {
+          core: {
+            title: "The Core Axis",
+            description:
+              "Represents the primary driver and default conscious lens of the pair. It is the active agent that initiates contact with the world, setting the agenda for decision-making or information gathering. It prioritizes speed, immediate application, and the path of least resistance for the psyche.",
+          },
+          support: {
+            title: "The Balance Axis",
+            description:
+              "Acts as the stabilizing anchor and necessary counterweight. It provides the depth, context, or feedback loop required to prevent the Core function from becoming overextended or one-sided. It ensures that efficiency has meaning, social harmony has logic, or abstract vision has concrete reality.",
+          },
+        },
+
+        macros: {
+          pragmatic: "The Pragmatic Axis",
+          harmonic: "The Harmonic Axis",
+          realizing: "The Realizing Axis",
+          inquiring: "The Inquiring Axis",
+        },
+
+        pairs: {
+          TeFi: {
+            concept: "Systematic Efficiency",
+            core: "Focuses on organizing the external world through objective logic, maximizing resource management, and executing plans based on verifiable metrics.",
+            support:
+              "Provides an internal check based on personal values and authenticity, ensuring that efficient systems align with what is personally meaningful.",
+          },
+          FiTe: {
+            concept: "Authentic Implementation",
+            core: "Prioritizes internal harmony, individual distinctiveness, and deep adherence to personal values and moral convictions irrespective of external pressure.",
+            support:
+              "Utilizes external structure and objective logic to organize, defend, and operationalize these personal values in the real world.",
+          },
+          FeTi: {
+            concept: "Social Cohesion",
+            core: "Navigates the external emotional atmosphere, prioritizing group harmony, social norms, and the collective values of the community.",
+            support:
+              "Uses an internal logical framework to analyze the consistency of social behaviors and to solve problems that benefit the group.",
+          },
+          TiFe: {
+            concept: "Analytical Precision",
+            core: "Seeks internal logical consistency and accuracy, deconstructing ideas to understand their underlying principles and mechanisms.",
+            support:
+              "Maintains an awareness of social dynamics and emotional impacts, helping to communicate complex logic in a way that is received well by others.",
+          },
+          SeNi: {
+            concept: "Immersive Realism",
+            core: "Engages directly with the immediate physical environment, seeking high-impact sensory experiences and responding spontaneously to the 'here and now'.",
+            support:
+              "Provides a background sense of future implications and underlying patterns to give direction and meaning to immediate actions.",
+          },
+          NiSe: {
+            concept: "Visionary Insight",
+            core: "Focuses on abstract patterns, future possibilities, and singular visions, often synthesizing complex information into a convergent perspective.",
+            support:
+              "Gathers concrete sensory data and real-world experiences to feed the intuition and ground abstract visions in reality.",
+          },
+          NeSi: {
+            concept: "Expansive Exploration",
+            core: "Generates a multitude of possibilities, connections, and novel ideas, constantly seeking 'what could be' across different contexts.",
+            support:
+              "Draws upon past experiences, detailed memory, and established facts to anchor brainstorming and provide a reference point for new ideas.",
+          },
+          SiNe: {
+            concept: "Reliable Stabilization",
+            core: "Compares current experiences with a stored database of past sensations and facts, prioritizing stability, routine, and tried-and-true methods.",
+            support:
+              "Entertains alternative possibilities and potential changes to established routines to prevent stagnation and prepare for the unexpected.",
+          },
+        },
+      },
     },
 
     Extras: {
