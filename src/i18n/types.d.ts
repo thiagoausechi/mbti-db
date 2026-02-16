@@ -83,7 +83,9 @@ declare module "next-intl" {
           subtitle: string;
         }>;
 
-        guidebook: Page<{}>;
+        guidebook: Page<{
+          personalities: Page<{}>;
+        }>;
       };
 
       Profile: {

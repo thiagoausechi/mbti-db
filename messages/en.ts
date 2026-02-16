@@ -44,6 +44,13 @@ const en: Messages = {
         slug: "guidebook",
         navigation: "Guidebook",
       },
+
+      personalities: {
+        metadata: {
+          slug: "personalities",
+          navigation: "Personalities",
+        },
+      },
     },
   },
 
